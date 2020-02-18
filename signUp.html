@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <title>Bable | Crear cuenta</title>
+    <script>
+        var img1 = "img/back/bg1.png"
+        var img2 = "img/back/bg2.png"
+        var img3 = "img/back/bg3.png"
+        var img4 = "img/back/bg4.png"
+        var img5 = "img/back/bg5.png"
+        var img6 = "img/back/bg6.png"
+        var img7 = "img/back/bg7.png"
+        var img8 = "img/back/bg8.png"
+        var img9 = "img/back/bg9.png"
+        var img10 = "img/back/bg10.png"
+        var randomize = Math.round(Math.random() * 9) + 1
+        if (randomize == 1) {
+            newimg = img1
+        } else if (randomize == 2) {
+            newimg = img2
+        } else if (randomize == 3) {
+            newimg = img3
+        } else if (randomize == 4) {
+            newimg = img4
+        } else if (randomize == 5) {
+            newimg = img5
+        } else if (randomize == 6) {
+            newimg = img6
+        } else if (randomize == 7) {
+            newimg = img7
+        } else if (randomize == 8) {
+            newimg = img8
+        } else if (randomize == 9) {
+            newimg = img9
+        } else {
+            newimg = img10
+        }
+        document.write('<body background="'+newimg+'">')
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container-fluid" id="header">
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="tlogo">
+                        <h2>V</h2>
+                    </div>
+                </div>
+                <div class="col-md-4" id="reg">
+                    <a href="signIn.php" role="button" id="register"><b>Iniciar sesion</b></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="content">
+            <div class="wizard">
+                <div class="wizard-inner">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="#1">
+                                <span >
+                                    <i class="glyphicon glyphicon-heart"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="#2">
+                                <span >
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="#3">
+                                <span >
+                                    <i class="glyphicon glyphicon-lock"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form action="" method="post">
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" name="name" class="form-control" placeholder="Nombres" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" name="lastname" class="form-control" placeholder="Apellidos"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <input type="text" name="code" class="form-control" placeholder="Codigo" required>
+                            </div>
+                            <div class="form-group col-md-7">
+                                <input type="email" name="email" class="form-control" placeholder="Correo electrónico"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-9">
+                                Ya tengo una cuenta <a href="#" id="logIn">Iniciar sesión</a>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <ul>
+                                    <li>
+                                        <button type="button" class="btn btn-primary btn-block next-step ">Siguiente</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step2">
+                        <div class="form-group col-md-12">
+                            <input type="text" name="user" id="user" class="form-control"
+                                placeholder="Nombre de usuario" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="password" name="pass" class="form-control" placeholder="Contraseña"
+                                    required>
+                                <small>La contraseña debe tener al menos 8 caracteres, 1 caracter numerico y 1 mayuscula.</small>
+                            </div>
+                            <div class="form-group col-md-6" id="selects">
+                                <input type="password" name="vpass" class="form-control"
+                                    placeholder="Repetir contraseña" required>
+                                <small>Las contraseñas deben ser iguales.</small>
+                            </div>
+                        </div>
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Anterior</button>
+                            </li>
+                            <li><button type="button" class="btn btn-default next-step">Siguiente</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step3">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <div id="title">
+                                    <h4>Preguntas de seguridad</h4>
+                                    <p>Selecciona dos preguntas de seguridad. Estas preguntas nos ayudaran a verificar tu identidad si olvidas tu contraseña. Puedes configurarlas ahora o cuando lo desees. ¡No hay prisa!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <select name="questS1" class="form-control">
+                                    <option selected>Pregunta</option>
+                                    <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
+                                    <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
+                                    <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?
+                                    </option>
+                                    <option value="quest4">¿Cual es tu lugar favorito?</option>
+                                    <option value="quest5">¿Cual era la marca de tu primer celular?</option>
+                                    <option value="quest6">¿Como se llamaba tu primera mascota?</option>
+                                    <option value="quest7">¿Cual era la raza de tu primera mascota?</option>
+                                    <option value="quest8">¿Que fue lo primero que aprendiste a cocinar?
+                                    </option>
+                                    <option value="quest9">¿Cual era tu cantante o grupo preferido en el instituto?
+                                    </option>
+                                </select>
+                                <input type="text" placeholder="Escribe tu respuesta" name="answer1"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <select name="questS2" class="form-control">
+                                    <option selected>Pregunta</option>
+                                    <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
+                                    <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
+                                    <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?
+                                    </option>
+                                    <option value="quest4">¿Cual es tu lugar favorito?</option>
+                                    <option value="quest5">¿Cual era la marca de tu primer celular?</option>
+                                    <option value="quest6">¿Como se llamaba tu primera mascota?</option>
+                                    <option value="quest7">¿Cual era la raza de tu primera mascota?</option>
+                                    <option value="quest8">¿Que fue lo primero que aprendiste a cocinar?
+                                    </option>
+                                    <option value="quest9">¿Cual era tu cantante o grupo preferido en el instituto?
+                                    </option>
+                                </select>
+                                <input type="text" placeholder="Escribe tu respuesta" name="answer2"
+                                    class="form-control" id="selects">
+                            </div>
+                        </div>
+                        <div class="form-group" id="selects">
+                            <label>
+                                <input type="checkbox" name="check" required> Para crear una cuenta en Vaaner, debes
+                                aceptar las <a href="#">Condiciones del Servicio</a>. Además, cuando creas una cuenta, tratamos tus datos de acuerdo con lo estipulado en nuestra <a href="#">Politica de Privacidad</a>.
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-9">
+                                <ul class="list-inline pull-left">
+                                    <li><button type="button" class="btn btn-default prev-step">Anterior</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3" id="reg">
+                                <button type="submit" name="sign_up" id="register" class="btn btn-primary btn-block">Registrarse</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <?php include("signUp_.php"); ?>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

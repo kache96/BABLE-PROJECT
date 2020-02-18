@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+}
+#imgBack{
+    position: absolute;
+    width: 100%;
+    z-index: -1000;
+    overflow: hidden;
+    }
+#header{
+    background: transparent;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+
+}
+#tlogo{
+    text-align: left;
+    width: 5%;
+
+}
+h2{
+    text-align: center;
+    color: white;
+    font-family: 'Pacifico', cursive;
+}
+#reg{
+    text-align: right;
+}
+#register{
+    color: #939192;
+    background: #FEFDFD;
+    padding: 9px;
+    border-radius: 2px;
+    text-align: center;
+    width: 130px;
+}
+#form{
+    max-width: 30%;
+    background: transparent;
+    text-align: center;
+    display: block;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+h1{
+    font-size: 5.0rem;
+    text-align: center;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    padding-bottom: 10%;
+}
+.form-control{
+    border-style: none;
+    border-radius: 0;
+    padding: 4%;
+    background: #FEFDFD;
+}
+.nU{
+    border-bottom-style: solid;
+}
+
+.form-control:focus{
+    -webkit-box-shadow: none;
+}
+.btn{
+    background-image: url(../img/ff.gif);
+    border-style: none;
+    padding: 4%;
+    border-radius: 1px;
+}
+.btn:focus{
+    -webkit-box-shadow: none;
+
+}
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}

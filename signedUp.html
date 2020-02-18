@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/h22.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/signedup.css">
+	<title>Vaaner | Crear cuenta</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="head">
+        <img src="img/back1.png" alt=""/>
+    </div>
+    <form action="" method="post"> 
+        <div class="container">
+        <div id="step1">
+            <h2>1</h2>
+        </div>
+        <br>
+        <div id="title">
+            <h4>Ingresar usuario</h4>
+            <p>Ingresa el nombre de usuario que escogiste anteriormente.</p>
+        </div>
+        <br>
+        <div>
+            <input type="text" placeholder="Escribe tu nombre de usuario" name="user" class="form-control" required>
+        </div>
+        <br><br><br>
+        <div id="step2">
+            <h2>2</h2>
+        </div>
+        <br><br><br>
+        <div id="title">
+            <h4>Preguntas de seguridad</h4>
+            <p>Selecciona dos preguntas de seguridad. Estas preguntas nos ayudaran a verificar tu identidad si olvidas tu contraseña.</p>
+        </div>
+        <br>
+        <div id="quests">
+                <select name="questS1" class="form-control" required>
+                    <option selected>Pregunta</option>
+                    <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
+                    <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
+                    <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?</option>
+                    <option value="quest4">¿Cual es tu lugar favorito?</option>
+                    <option value="quest5">¿Cual era la marca de tu primer celular?</option>
+                    <option value="quest6">¿Como se llamaba tu primera mascota?</option>
+                    <option value="quest7">¿Cual era la raza de tu primera mascota?</option>
+                    <option value="quest8">¿Que fue lo primero que aprendiste a cocinar?</option>
+                    <option value="quest9">¿Cual era tu cantante o grupo preferido en el instituto?</option>
+                </select>
+                <input type="text" placeholder="Escribe tu respuesta" name="answer1" class="form-control" required>
+                <br>
+                <select name="questS2" class="form-control" required>
+                    <option selected>Pregunta</option>
+                    <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
+                    <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
+                    <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?</option>
+                    <option value="quest4">¿Cual es tu lugar favorito?</option>
+                    <option value="quest5">¿Cual era la marca de tu primer celular?</option>
+                    <option value="quest6">¿Como se llamaba tu primera mascota?</option>
+                    <option value="quest7">¿Cual era la raza de tu primera mascota?</option>
+                    <option value="quest8">¿Que fue lo primero que aprendiste a cocinar?</option>
+                    <option value="quest9">¿Cual era tu cantante o grupo preferido en el instituto?</option>
+                </select>
+                <input type="text" placeholder="Escribe tu respuesta" name="answer2" class="form-control" required>
+                <br>
+                <div>
+                    <button type="submit" name="saveQ" class="btn btn-primary btn-block">Guardar</button>
+                </div>
+                <?php include("signedUp_.php"); ?>
+        </div>
+    </div>
+    </form>
+
+    <div class="container-fluid" id="head">
+        <img src="img/back2.png" alt=""/>
+    </div>
+    
+</body>
+</html>
