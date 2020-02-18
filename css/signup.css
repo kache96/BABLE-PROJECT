@@ -3,9 +3,11 @@
     padding: 0;
     font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
+.wizard{
+    text-align: center;
+}
 .wizard > div.wizard-inner {
     position: relative;
-    margin-bottom: 10%;
 }
 .connecting-line {
     height: 1%;
@@ -17,6 +19,9 @@
     right: 0;
     top: 50%;
     z-index: 1;
+}
+.nav-tabs {
+    border-bottom: none;
 }
 .wizard .nav-tabs > li {
     width: 25%;
@@ -47,8 +52,26 @@ span.round-tab {
     color: #e0e0e0;
     
 }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    color: rgb(129, 129, 129);
+    background-color: transparent;
+    border: none;
+
+}
+.nav>li.disabled>a:hover{
+    border: none;
+    background-color: transparent;
+    color: rgb(66, 66, 66);
+}
+.nav>li>a:hover{
+    border: none;
+    background-color: transparent;
+    color: rgb(66, 66, 66);
+}
+.material-icons{
+    font-size: 50px;}
 ul{
-    list-style:none;
+    padding-top: 3%;
 }
 #header{
     background: transparent;
@@ -70,25 +93,115 @@ h2{
 #content{
     max-width: 50%;
     background: transparent;
-    text-align: center;
     display: block;
-    padding-top: 4%;
+    padding-top: 1%;
     padding-bottom: 5%;
 
 }
-#register{
+#login{
     color: #939192;
     background: #FEFDFD;
     padding: 9px;
     border-radius: 2px;
     width: 130px;
 }
-.form-control{
+#register{
+    background-image: url(../img/ff.gif);
+    border-style: none;
+    padding: 4%;
+    border-radius: 1px;
+    font-size: large;
+}
+input{
     border-style: none;
     border-radius: 0;
     padding: 4%;
     background: #FEFDFD;
+    width: 100%;
 }
-.form-control:focus{
-    -webkit-box-shadow: none;
+.form-group{
+    margin-bottom: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+select{
+    border-style: none;
+    border-radius: 0;
+    padding: 4%;
+    background: #FEFDFD;
+    width: 100%;
+}
+#info{
+    color: white;
+}
+button{
+    color: rgb(70, 70, 70);
+    background-image: url(../img/figures.gif);
+    background-size: 100% ;
+    padding: 9px;
+    border-radius: 2.5px;
+    border-style: none;
+    margin-top: 15px;
+    width: 100%;
+}
+#nameUser{
+    height: 10px;
+    padding-left: 14px;
+}
+#questinfo{
+    text-align: justify;
+    color: white;
+}
+.container{
+    display: block;
+    position: relative;
+    padding-left: 6%;
+    cursor: pointer;
+}
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30%;
+    width: 4%;
+    background-color:white;
+}
+.container:hover input ~ .checkmark{
+    background-color: white;
+}
+.container input:checked ~ .checkmark{
+    background-color: blue;
+}
+.checkmark:after{
+    content: "";
+    position: absolute;
+}
+.container .checkmark:after{
+    left: 38%;
+    top: 25%;
+    width: 19.5%;
+    height: 45%;
+    border: solid white;
+    border-width: 0px 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+#answer{
+      margin-top: 5%;
+      color: white;
+}
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
 }
