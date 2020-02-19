@@ -3,12 +3,10 @@
     padding: 0;
     font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
-#imgBack{
-    position: absolute;
-    width: 100%;
-    z-index: -1000;
-    overflow: hidden;
-    }
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #header{
     background: transparent;
     width: 100%;
@@ -16,17 +14,6 @@
     padding-bottom: 2%;
     padding-left: 3%;
     padding-right: 3%;
-
-}
-#tlogo{
-    text-align: left;
-    width: 5%;
-
-}
-h2{
-    text-align: center;
-    color: white;
-    font-family: 'Pacifico', cursive;
 }
 #reg{
     text-align: right;
@@ -39,21 +26,37 @@ h2{
     text-align: center;
     width: 130px;
 }
+#register:focus{
+    color: rgb(155, 0, 0);
+    border: solid rgb(155, 0, 0) 1px;
+}
+#register:hover{
+    color: #9b0000;
+}
 #form{
     max-width: 30%;
     background: transparent;
     text-align: center;
     display: block;
-    padding-top: 5%;
+    padding-top: 1%;
     padding-bottom: 5%;
 
 }
-h1{
-    font-size: 5.0rem;
-    text-align: center;
-    color: white;
-    font-family: 'Pacifico', cursive;
-    padding-bottom: 10%;
+button:focus{
+    color: rgb(155, 0, 0);
+    border: solid rgb(155, 0, 0) 1px;
+}
+button:hover{
+    color: #9b0000;
+}
+button{
+    color: rgb(70, 70, 70);
+    background-image: url(../img/figures.gif);
+    background-size: 100% ;
+    padding: 10px;
+    border-radius: 2.5px;
+    border-style: none;
+    width: 100%;
 }
 .form-control{
     border-style: none;
@@ -63,10 +66,16 @@ h1{
 }
 .nU{
     border-bottom-style: solid;
-}
 
+}
+.form-control:hover{
+    border-bottom: solid rgb(155, 0, 0) 1px;
+}
 .form-control:focus{
     -webkit-box-shadow: none;
+}
+input:focus, button:focus{
+    outline: none;
 }
 .btn{
     background-image: url(../img/ff.gif);
@@ -83,5 +92,29 @@ a{
 }
 a:hover{
     text-decoration: none;
+    color: rgb(155, 0, 0);
+}
+#logo{
+    min-height: 60px;
+    min-width: 100%;
+    background-position: left;    background-size: 5%; 
+    background-repeat: no-repeat;  
+    background-image: url(../img/logo.png);
+}
+#logo:hover{
+    background-image: url(../img/logor.png);
+}
+#title{
+    min-height: 120px;
+    min-width: 100%;
+    background-position: center;    background-size: 80%; 
+    background-repeat: no-repeat;  
+    background-image: url(../img/titlewh.png);
+}
+#title:hover{
+    background-image: url(../img/titlerh.png);
+}
+#titlep{
+    text-align: center;
     color: white;
 }

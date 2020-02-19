@@ -8,21 +8,21 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/h22.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/logIn.css">
 
     <head>
         <script>
-            var img1 = "img/back/bg1.png"
-            var img2 = "img/back/bg2.png"
-            var img3 = "img/back/bg3.png"
-            var img4 = "img/back/bg4.png"
-            var img5 = "img/back/bg5.png"
-            var img6 = "img/back/bg6.png"
-            var img7 = "img/back/bg7.png"
-            var img8 = "img/back/bg8.png"
-            var img9 = "img/back/bg9.png"
-            var img10 = "img/back/bg10.png"
+            var img1 = "img/back/1.png"
+            var img2 = "img/back/2.png"
+            var img3 = "img/back/3.png"
+            var img4 = "img/back/4.png"
+            var img5 = "img/back/5.png"
+            var img6 = "img/back/6.png"
+            var img7 = "img/back/7.png"
+            var img8 = "img/back/8.png"
+            var img9 = "img/back/9.png"
+            var img10 = "img/back/10.png"
             var randomize = Math.round(Math.random() * 9) + 1
             if (randomize == 1) {
                 newimg = img1
@@ -45,29 +45,28 @@
             } else {
                 newimg = img10
             }
-            document.write('<body background="'+newimg+'">')
+            document.write('<body background="' + newimg + '">')
         </script>
     </head>
-    <title>Vaaner | Iniciar sesion</title>
+    <title>Bable | Iniciar sesion</title>
 </head>
 
 <body>
     <div class="container-fluid" >
         <div class="container-fluid" id="header">
             <div class="row">
-                <div class="col-md-8">
-                    <div id="tlogo">
-                        <h2>V</h2>
-                    </div>
-                </div><b></b>
+                <div class="col-md-8" >
+                    <div id="logo"></div>
+                </div>
                 <div class="col-md-4" id="reg">
                     <a href="signUp.php" role="button" id="register"><b>Registrarse</b></a>
                 </div>
             </div>
         </div>
         <div class="container" id="form">
-            <div id="tittle">
-                <h1>Vaaner</h1>
+            <div>
+                <div id="title"></div>
+                <div id="titlep"><p><b>| INICIAR SESION |</b></p></div>
             </div>
             <form action="" method="post">
                 <div id="log">
@@ -75,7 +74,7 @@
                     <input type="password" name="pass" class="form-control" placeholder="Contraseña" required>
 
                     <br>
-                    <button type="submit" name="sign_in" class="btn btn-primary btn-block"><b>Ingresar</b></button>
+                    <button type="submit" name="sign_in"><b>Ingresar</b></button>
                     <br>
                     <small><a href="passf.php" role="button">¿Has olvidado tu contraseña?</a></small>
                 </div>
