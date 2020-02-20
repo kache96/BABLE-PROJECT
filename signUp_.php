@@ -1,9 +1,9 @@
 <?php
 include("include/connection.php");
 
-if(isset($_POST['sign_up'])){
+if(isset($_POST['btnSignUp'])){
 
-	$name = htmlentities(mysqli_real_escape_string($con,$_POST['name']));
+	$name = htmlentities(mysqli_real_escape_string($con,$_POST['namec']));
 	$lastname = htmlentities(mysqli_real_escape_string($con,$_POST['lastname']));
 	$code = htmlentities(mysqli_real_escape_string($con,$_POST['code']));
 	$email = htmlentities(mysqli_real_escape_string($con,$_POST['email']));
@@ -11,7 +11,7 @@ if(isset($_POST['sign_up'])){
 	$pass = htmlentities(mysqli_real_escape_string($con,$_POST['pass']));
 	$vpass = htmlentities(mysqli_real_escape_string($con,$_POST['vpass']));
 	$squest1 = htmlentities(mysqli_real_escape_string($con,$_POST['squest1']));
-	$sanswer1	 = htmlentities(mysqli_real_escape_string($con,$_POST['sanswer1	']));
+	$sanswer1 = htmlentities(mysqli_real_escape_string($con,$_POST['sanswer1']));
 	$squest2 = htmlentities(mysqli_real_escape_string($con,$_POST['squest2']));
 	$sanswer2 = htmlentities(mysqli_real_escape_string($con,$_POST['sanswer2']));
 
@@ -37,6 +37,19 @@ if(isset($_POST['sign_up'])){
 		?>
 			<br>
 			<div class="alert alert-danger" role="alert">¡Vaya! Tenemos la sospecha de que ya tienes una cuenta con nosotros. La direccion de correo electronico que haz ingresado se encuentra en uso. <a href="signUp.php" class="alert-link">Intenta con uno diferente.</a></div>
+		<?php
+		exit();
+	}
+	
+	$check_code = "SELECT * FROM client WHERE code='$code'";
+	$run_checkcode = mysqli_query($con,$check_code);
+	$check2 = mysqli_num_rows($run_checkcode);
+
+	if($check2 == 1)
+	{
+		?>
+			<br>
+			<div class="alert alert-danger" role="alert">¡Vaya! Tenemos la sospecha de que ya tienes una cuenta con nosotros. El codigo que haz ingresado se encuentra en uso. <a href="signUp.php" class="alert-link">Intenta con uno diferente.</a></div>
 		<?php
 		exit();
 	}
@@ -121,14 +134,33 @@ if(isset($_POST['sign_up'])){
 		exit();
 	}
 
-	$insert1 = "INSERT INTO client (name, lastname, email, code) VALUES ('$name','$lastname','$email','$code')";
-	$insert2 = "INSERT INTO user (username, md5('$pass'), avatar, signup_date) VALUES ('$username','$pass','',now())";
-	$insert3 = "INSERT INTO userquest (squest1, sanswer1, squest2, sanswer2) VALUES ('$squest1','$sanswer1','$squest2','$sanswer2')";
+	if($squest1 == $squest2)
+	{
+		?>
+			<br>
+			<div class="alert alert-danger" role="alert">¡Ups! Las preguntas de seguridad deben ser diferentes. Tienes varias preguntas diferentes que puedes escoger. <a href="signUp.php" class="alert-link">Selecciona dos preguntas de seguridad diferentes.</a></div>
+		<?php 
+		exit();
+	}
 
-	$query = mysqli_query($con,$insert);
+	if (empty($name) || empty($lastname) || empty($code) || empty($email) || empty($username) || empty($pass) || empty($squest1) || empty($sanswer1) || empty($squest2) || empty($sanswer2)) 
+	{
+    	?>
+			<br>
+			<div class="alert alert-danger" role="alert">Rellena todos los campos.</div>
+		<?php 
+	}
 
-	if($query){
-			header('Location: index.html');
+
+	$insert1 = $con->query("INSERT INTO `client`(`namec`, `lastname`, `code`, `email`) VALUES ('$name','$lastname','$code','$email')");
+	$insert2 = $con->query("INSERT INTO `user`(`username`, `pass`, `signup_date`) VALUES ('$username',md5('$pass'),now())");
+	$insert3 = $con->query("INSERT INTO `userquest`(`squest1`, `sanswer1`, `squest2`, `sanswer2`) VALUES ('$squest1',md5('$sanswer1'),'$squest2',md5('$sanswer2'))");
+	if ($insert1 == true && $insert2 == true ){
+		$insert3;
+	}
+
+	if($insert3 == true){
+			header('Location: signIn.php');
 		} 
 		else
 		{

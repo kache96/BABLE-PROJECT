@@ -136,12 +136,19 @@ button:focus{
 button:hover{
     color: rgb(155, 0, 0);
 }
-input{
+input[type="text"], input[type="password"], input[type="email"] {
     border-style: none;
     border-radius: 0;
     padding: 4%;
     background: #FEFDFD;
     width: 100%;
+}
+#checks{
+    float: left;
+    margin-right: 5px;
+}
+#ranswer{
+    margin-bottom: 20px;
 }
 .form-group{
     margin-bottom: 6px;
@@ -155,6 +162,7 @@ select{
     background: #FEFDFD;
     width: 100%;
 }
+
 #info{
     color: white;
 }

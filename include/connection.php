@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "dbvaaner";
+$database = "babledb";
 $username = "root";
 $password = "";
 // Create connection

@@ -73,6 +73,8 @@ button{
 }
 .form-control:focus{
     -webkit-box-shadow: none;
+    outline: none;
+
 }
 input:focus, button:focus{
     outline: none;
