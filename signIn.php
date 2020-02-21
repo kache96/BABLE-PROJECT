@@ -70,8 +70,8 @@
             </div>
             <form action="" method="post">
                 <div id="log">
-                    <input type="text" name="username" class="form-control nU" placeholder="Nombre de usuario" required>
-                    <input type="password" name="pass" class="form-control" placeholder="Contraseña" required>
+                    <input type="text" name="username" id="nameuser" placeholder="Nombre de usuario" required>
+                    <input type="password" name="pass" id="password" placeholder="Contraseña" required>
 
                     <br>
                     <button type="submit" name="btnSignIn"><b>Ingresar</b></button>
@@ -82,6 +82,10 @@
             </form>
         </div>
     </div>
+    <div class="container-fluid" id="header">
+        <div  id="info">
+            <p>Fotografia por <a href="https://www.instagram.com/banksy/"><b>@Banksy</b></a></p>
+        </div>
 </body>
 
 </html>

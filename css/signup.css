@@ -6,6 +6,11 @@
 body{
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+
+}
+.container-fluid{
+    display: block;
 }
 .wizard{
     text-align: center;
@@ -78,6 +83,7 @@ ul{
 #header{
     background: transparent;
     width: 100%;
+    height: 50%;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 3%;
@@ -86,7 +92,7 @@ ul{
 #logo{
     min-height: 60px;
     min-width: 100%;
-    background-position: left;    background-size: 5%; 
+    background-position: left;    background-size: 7%; 
     background-repeat: no-repeat;  
     background-image: url(../img/logo.png);
 }
@@ -96,7 +102,8 @@ ul{
 #title{
     min-height: 160px;
     min-width: 100%;
-    background-position: center;    background-size: 60%; 
+    background-position: center;    
+    background-size: 60%; 
     background-repeat: no-repeat; 
     background-image: url(../img/titlewh.png);
 }
@@ -116,6 +123,7 @@ ul{
 }
 #content{
     max-width: 50%;
+    max-height: 100%;
     background: transparent;
     display: block;
     padding-top: 1%;
@@ -180,54 +188,23 @@ input:focus, button:focus, select:focus{
     outline: none;
 }
 #nameUser{
-    height: 10px;
+    min-height: 10px;
     padding-left: 14px;
 }
 #questinfo{
     text-align: justify;
     color: white;
 }
-.container{
-    display: block;
-    position: relative;
-    padding-left: 6%;
-    cursor: pointer;
-}
-.checkmark{
+#alert{
+    background-color: #00000057;
+    color: rgb(255, 255, 255);
+    border: solid rgba(0, 0, 0, 0.089) 3px;
+    width: 50%;
+    text-align:center;
+    margin-left:25%;
+    margin-right:25%;
+    padding: 20px;
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 30%;
-    width: 4%;
-    background-color:white;
-}
-.container:hover input ~ .checkmark{
-    background-color: white;
-}
-.container input:checked ~ .checkmark{
-    background-color: rgb(155, 0, 0);
-}
-.checkmark:after{
-    content: "";
-    position: absolute;
-}
-.container .checkmark:after{
-    left: 38%;
-    top: 25%;
-    width: 19.5%;
-    height: 45%;
-    border: solid white;
-    border-width: 0px 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-.container input{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
 }
 #answer{
       margin-top: 5%;

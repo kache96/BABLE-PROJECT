@@ -48,47 +48,48 @@
     </script>
 </head>
 <script>
-    (function (e, t, n) { var r = e.querySelectorAll("html")[0]; r.className = r.className.replace(/(^|s)no-js(s|$)/, "$1js$2") })(document, window, 0);
-$(document).ready(function () {
-    $('.nav-tabs > li a[title]').tooltip();
+        (function (e, t, n) { var r = e.querySelectorAll("html")[0]; r.className = r.className.replace(/(^|s)no-js(s|$)/, "$1js$2") })(document, window, 0);
+    $(document).ready(function () {
+        $('.nav-tabs > li a[title]').tooltip();
 
-    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+        $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 
-        var $target = $(e.target);
+            var $target = $(e.target);
 
-        if ($target.parent().hasClass('disabled')) {
-            return false;
-        }
+            if ($target.parent().hasClass('disabled')) {
+                return false;
+            }
+        });
+
+        $(".next-step").click(function (e) {
+
+            var $active = $('.wizard .nav-tabs li.active');
+            $active.next().removeClass('disabled');
+            nextTab($active);
+
+        });
+        $(".prev-step").click(function (e) {
+
+            var $active = $('.wizard .nav-tabs li.active');
+            prevTab($active);
+
+        });
     });
 
-    $(".next-step").click(function (e) {
-
-        var $active = $('.wizard .nav-tabs li.active');
-        $active.next().removeClass('disabled');
-        nextTab($active);
-
-    });
-    $(".prev-step").click(function (e) {
-
-        var $active = $('.wizard .nav-tabs li.active');
-        prevTab($active);
-
-    });
-});
-
-function nextTab(elem) {
-    $(elem).next().find('a[data-toggle="tab"]').click();
-}
-function prevTab(elem) {
-    $(elem).prev().find('a[data-toggle="tab"]').click();
-}
+    function nextTab(elem) {
+        $(elem).next().find('a[data-toggle="tab"]').click();
+    }
+    function prevTab(elem) {
+        $(elem).prev().find('a[data-toggle="tab"]').click();
+    }
 
 </script>
+
 <body>
     <div class="container-fluid" id="page">
         <div class="container-fluid" id="header">
             <div class="row">
-                <div class="col-md-8" >
+                <div class="col-md-8">
                     <div id="logo"></div>
                 </div>
                 <div class="col-md-4" id="reg">
@@ -99,7 +100,9 @@ function prevTab(elem) {
         <div class="container-fluid" id="content">
             <div>
                 <div id="title"></div>
-                <div id="titlep"><p><b>| CREAR CUENTA |</b></p></div>
+                <div id="titlep">
+                    <p><b>| CREAR CUENTA |</b></p>
+                </div>
             </div>
             <div class="wizard">
                 <div class="wizard-inner">
@@ -122,9 +125,9 @@ function prevTab(elem) {
                                 </span>
                             </a>
                         </li>
-                        <li role="presentation" class="disabled" >
+                        <li role="presentation" class="disabled">
                             <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Tercer paso">
-                                <span >
+                                <span>
                                     <i class="material-icons">
                                         how_to_reg
                                     </i>
@@ -157,9 +160,11 @@ function prevTab(elem) {
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <input type="text" name="code" placeholder="Codigo">
+                                <small id="info">El codigo debe contener minimo 4 caracteres y maximo 15.</small>
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="email" name="email" placeholder="Correo electrónico">
+                                <small id="info">Por favor, escriba una direccion de correo electronico real.</small>
                             </div>
                         </div>
                         <ul class="list-inline pull-right">
@@ -169,13 +174,14 @@ function prevTab(elem) {
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step2">
                         <div class="form-group col-md-12">
+                        <small id="info">El nombre de usuario debe contener minimo 4 caracteres y maximo 64. Ademas, debe ser diferente al nombre, apellido y correo electronico.</small>
                             <input type="text" name="username" id="nameUser" placeholder="Nombre de usuario">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <input type="password" name="pass" placeholder="Contraseña">
                                 <small id="info">La contraseña debe tener al menos 8 caracteres, 1 caracter numerico y 1
-                                    mayuscula.</small>
+                                    mayuscula. Ademas, debe ser diferente al nombre, apellido y correo electronico.</small>
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="password" name="vpass" placeholder="Repetir contraseña">
@@ -197,17 +203,17 @@ function prevTab(elem) {
                             <div class="form-group col-md-12" id="questinfo">
                                 <h4><b>Preguntas de seguridad</b></h4>
                                 <p>Selecciona dos preguntas de seguridad y escribe su respuesta correspondiente. Estas
-                                    preguntas nos ayudaran a verificar tu identidad si olvidas tu contraseña Puedes
-                                    configurarlas ahora o cuando lo desees. ¡No hay prisa!
+                                    preguntas nos ayudaran a verificar tu identidad en caso de que olvides tu contraseña.
                                     <br>
-                                    <small>Por favor, escribe una respuesta que puedas recordar con facilidad y ten presente que las preguntas que selecciones deben ser diferentes.</small>
+                                    <small>Por favor, escribe una respuesta que puedas recordar con facilidad y ten
+                                        presente que las preguntas que selecciones deberan ser diferentes.</small>
                                 </p>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <select name="squest1">
-                                    <option selected id="selected">Seleccione la pregunta</option>
+                                    <option selected id="selected">1. Seleccione la pregunta</option>
                                     <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
                                     <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
                                     <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?
@@ -224,7 +230,7 @@ function prevTab(elem) {
                             </div>
                             <div class="form-group col-md-6">
                                 <select name="squest2">
-                                    <option selected>Seleccione la pregunta</option>
+                                    <option selected>2. Seleccione la pregunta</option>
                                     <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
                                     <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
                                     <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?
@@ -242,17 +248,13 @@ function prevTab(elem) {
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" placeholder="Escribe tu respuesta" name="sanswer1">
+                                <input type="text" placeholder="1. Escribe tu respuesta" name="sanswer1">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" placeholder="Escribe tu respuesta" name="sanswer2" id="ranswer">
+                                <input type="text" placeholder="2. Escribe tu respuesta" name="sanswer2" id="ranswer">
                             </div>
                             <br>
                         </div>
-                                    <label id="info">
-                                        <input type="checkbox" name="check" id="checks"> <p>Para crear una cuenta en Bable, debes aceptar las <a href="#"><b>Condiciones del Servicio</b></a>. Además, cuando creas una cuenta, tratamos tus datos de acuerdo con lo estipulado en nuestra <a href="#"><b>Politica de Privacidad</b></a>.</p>
-                                    </label>
-                                    
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <ul class="list-inline pull-right">
@@ -268,33 +270,39 @@ function prevTab(elem) {
                     <div class="tab-pane" role="tabpanel" id="step4">
                         <div class="form-row">
                             <div class="col-md-12" id="info">
-                                <h4><b>¡PARECE QUE TODO VA BIEN!</b></h4>
-                                <p>Por ultimo, por favor de click en el boton "registrarse" para finalizar su proceso de
-                                    registro en Bable. Recuerda que para iniciar sesion, utilizaras el nombre de usuario
-                                    que anteriormente elegiste y la contraseña. Esperamos que Bable sea de tu agrado,
-                                    muchas gracias por elegirnos.
+                                <p><b>¡PARECE QUE TODO VA BIEN!</b>
+                                    <br>
+                                    Por ultimo, por favor haz click en el boton "crear cuenta" para finalizar tu proceso de registro en Bable.
+                                    <br>
+                                    Recuerda que para iniciar sesion, utilizaras el nombre de usuario que anteriormente elegiste y la contraseña. 
+                                    <br><br>
+                                    Esperamos que Bable sea de tu agrado, muchas gracias por elegirnos.
                                 </p>
                             </div>
                         </div>
 
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="prev-step"><b>Anterior</b></button>
-                                        </li>
-                                        <li><button type="submit" name="btnSignUp"><b>Registrarse</b></button>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <ul class="list-inline pull-right">
+                                    <li><button type="button" class="prev-step"><b>Anterior</b></button>
+                                    </li>
+                                    <li><button type="submit" name="btnSignUp"><b>Crear cuenta</b></button>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
                 </div>
-                <?php include("signUp_.php"); ?>
-            </form>
+                <div class="clearfix"></div>
         </div>
-        
+        <?php include("signUp_.php"); ?>
+        </form>
+    </div>
+    <div class="container-fluid" id="header">
+        <div class="pull-right" id="info">
+            <p>Fotografia por <a href="https://www.instagram.com/banksy/"><b>@Banksy</b></a></p>
+        </div>
+    </div>
     </div>
 </body>
 

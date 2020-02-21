@@ -6,6 +6,7 @@
 body{
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 #header{
     background: transparent;
@@ -58,36 +59,28 @@ button{
     border-style: none;
     width: 100%;
 }
-.form-control{
-    border-style: none;
-    border-radius: 0;
-    padding: 4%;
-    background: #FEFDFD;
+#password{
+    margin-bottom: 5%;
 }
-.nU{
-    border-bottom-style: solid;
+#nameuser{
+    border-bottom: solid rgb(212, 212, 212) 0.1px;
 
 }
-.form-control:hover{
+input:hover{
     border-bottom: solid rgb(155, 0, 0) 1px;
 }
-.form-control:focus{
-    -webkit-box-shadow: none;
-    outline: none;
-
+#nameuser:hover{
+    border-bottom: solid rgb(155, 0, 0) 1px;
 }
 input:focus, button:focus{
     outline: none;
 }
-.btn{
-    background-image: url(../img/ff.gif);
+input{
     border-style: none;
+    border-radius: 0;
     padding: 4%;
-    border-radius: 1px;
-}
-.btn:focus{
-    -webkit-box-shadow: none;
-
+    background: #FEFDFD;
+    width: 100%;
 }
 a{
     color: white;
@@ -99,7 +92,7 @@ a:hover{
 #logo{
     min-height: 60px;
     min-width: 100%;
-    background-position: left;    background-size: 5%; 
+    background-position: left;    background-size: 7%; 
     background-repeat: no-repeat;  
     background-image: url(../img/logo.png);
 }
@@ -119,4 +112,8 @@ a:hover{
 #titlep{
     text-align: center;
     color: white;
+}
+#info{
+    color: white;
+    text-align: right;
 }
