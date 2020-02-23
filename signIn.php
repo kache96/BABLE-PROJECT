@@ -78,7 +78,6 @@
                     <br>
                     <small><a href="passf.php" role="button">¿Has olvidado tu contraseña?</a></small>
                 </div>
-                <?php include("signIn_.php"); ?>
             </form>
         </div>
     </div>

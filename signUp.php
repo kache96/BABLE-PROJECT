@@ -1,3 +1,6 @@
+<?php
+include_once 'include/users.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -295,7 +298,16 @@
                 </div>
                 <div class="clearfix"></div>
         </div>
-        <?php include("signUp_.php"); ?>
+        <?php
+                $users = new Users();
+                if(isset($_POST['btnSignUp'])){
+                    $users->setNamec($_POST['namec']);
+                    $users->setLastname($_POST['lastname']);
+                    $users->getCode($_POST['code']);
+                    $users->setEmail($_POST['email']);
+                    $users->signUp();
+                }
+            ?>
         </form>
     </div>
     <div class="container-fluid" id="header">
