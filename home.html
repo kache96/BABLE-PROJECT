@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <title>Bable | Home</title>
+
+</head>
+<script>
+    (function (e, t, n) { var r = e.querySelectorAll("html")[0]; r.className = r.className.replace(/(^|s)no-js(s|$)/, "$1js$2") })(document, window, 0);
+    $(document).ready(function () {
+        $('.nav-tabs > li a[title]').tooltip();
+
+        $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+            var $target = $(e.target);
+
+            if ($target.parent().hasClass('disabled')) {
+                return false;
+            }
+        });
+
+        $(".next-step").click(function (e) {
+
+            var $active = $('.wizard .nav-tabs li.active');
+            $active.next().removeClass('disabled');
+            nextTab($active);
+
+        });
+        $(".prev-step").click(function (e) {
+
+            var $active = $('.wizard .nav-tabs li.active');
+            prevTab($active);
+
+        });
+    });
+
+    function nextTab(elem) {
+        $(elem).next().find('a[data-toggle="tab"]').click();
+    }
+    function prevTab(elem) {
+        $(elem).prev().find('a[data-toggle="tab"]').click();
+    }
+
+</script>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a class="navbar-brand"></a></li>
+                    <li><a href="home.php" id="info"><b>Home</b></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
+                    <div id="welcome"><b>Bienvenido <?php echo $user->getUser(); ?></b>
+                    </div>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" id="userIcon" data-toggle="dropdown">
+                            <span>
+                                <i class="material-icons">account_circle</i>
+                            </span>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="material-icons" id="configIcon">settings</i>Configuracion</a>
+                                </li>
+                                <li><a href="include/signOut.php" role="button"><i class="material-icons"
+                                            id="configIcon">settings_power</i><b>Cerrar sesion</b></a></li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <img src="img/BOOK.png" id="book">
+    </div>
+    <div class="container-fluid" id="page">
+        <div class="container-fluid" id="content">
+            <div class="wizard">
+                <div class="wizard-inner">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Primer paso">
+                                <span>
+                                    <img src="img/step1.png" id="steps">
+                        <h1 id="subtitle">Sede</h1>
+                        <p>Selecciona la sede en la que reservaras clase.</p>
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Segundo paso">
+                                <span>
+                                    <img src="img/step2.png" id="steps">
+                        <h1 id="subtitle">Idioma</h1>
+                        <p>Selecciona el idioma que estudias.</p>
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Tercer paso">
+                                <span>
+                                    <img src="img/step3.png" id="steps">
+                        <h1 id="subtitle">Libro</h1>
+                        <p>Selecciona el nivel del idioma que estudias.</p>
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Cuarto paso">
+                                <span>
+                                    <img src="img/step4.png" id="steps">
+                        <h1 id="subtitle">Dia y hora</h1>
+                        <p>Selecciona el dia y la hora en la que quieres reservar.</p>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <form action="" method="post">
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="image" src="img/arkadia.png" name="img" value="imgArkadia" id="idioma">
+                                <input type="image" src="img/niquia.png" name="img" value="imgArkadia" id="idioma">
+                                <input type="image" src="img/calasanz.png" name="img" value="imgArkadia" id="idioma">
+                                <input type="image" src="img/FRANCES.png" name="img" value="imgArkadia" id="idioma">
+                                <input type="image" src="img/FRANCES.png" name="img" value="imgArkadia" id="idioma">
+                                <input type="image" src="img/FRANCES.png" name="img" value="imgArkadia" id="idioma">
+                                <input type="image" src="img/FRANCES.png" name="img" value="imgArkadia" id="idioma">
+
+                                <select name="sedes">
+                                    <option selected id="selected">Sede</option>
+                                    <option value="sede1">Arkadia - Carrera 70 # 1 - 141 - 5to piso
+                                    </option>
+                                    <option value="sede2">Bello – C.C. Estación Niquia, Diagonal 55 No. 37 – 41, Local
+                                        424
+                                    </option>
+                                    <option value="sede3">Calasanz – Carrera 80 No.49 – 39
+                                    </option>
+                                    <option value="sede4">Centro Medellín – C.C. El Punto de la Oriental Carrera. 46 No.
+                                        47 – 66 Local 4010
+                                    </option>
+                                    <option value="sede5">Olaya - C.C. De Moda Outlet. Calle 16# 55 -129 - 3er piso
+                                    </option>
+                                    <option value="sede6">El Poblado – Calle 10 No. 40 – 50
+                                    </option>
+                                    <option value="sede7">Itagüí – CC. Plaza Arrayanes, Carrera 50A # 36-90, Local 401
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="next-step "><b>Siguiente</b></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step2">
+                        <div class="form-group col-md-12">
+                            <select name="sedes">
+                                <option selected id="selected">Idioma</option>
+                                <option value="idioma1">Ingles
+                                </option>
+                                <option value="idioma2">Frances
+                                </option>
+                                <option value="idioma3">Aleman
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <ul class="list-inline pull-right">
+                                <li><button type="button" class="prev-step"><b>Anterior</b></button>
+                                </li>
+                                <li><button type="button" class="next-step"><b>Siguiente</b></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" role="tabpanel" id="step3">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <select name="libros">
+                                    <option selected id="selected">Idioma</option>
+                                    <option value="libro1">A1 - Libro 1
+                                    </option>
+                                    <option value="libro2">A2 - Libro 2
+                                    </option>
+                                    <option value="libro3">B1 - Libro 3
+                                    </option>
+                                    <option value="libro3">B2 - Libro 4
+                                    </option>
+                                    <option value="libro3">C1 - Libro 5
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <ul class="list-inline pull-right">
+                                    <li><button type="button" class="prev-step"><b>Anterior</b></button>
+                                    </li>
+                                    <li><button type="button" class="next-step"><b>Siguiente</b></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" role="tabpanel" id="step4">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <input type="datetime" name="datetime" placeholder="Ingrese el dia y la hora">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <ul class="list-inline pull-right">
+                                    <li><button type="button" class="prev-step"><b>Anterior</b></button>
+                                    </li>
+                                    <li><button type="submit" name="btnSignUp"><b>Crear cuenta</b></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </form>
+            <div class="container-fluid">
+                <img src="img/back5.png" id="book">
+            </div>
+</body>
+
+</html>
+<!--
+<h1 id="subtitle">Idioma:</h1>
+        <p>Selecciona el idioma que estudias.</p>
+        <div class="row" id="language">
+            <div class="col-md-4" >
+                <a href="ingles.php"><img src="img/INGLES.png" id="idioma"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="ingles.php"><img src="img/FRANCES.png" id="idioma"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="ingles.php"><img src="img/ALEMAN.png" id="idioma"></a>
+            </div>
+        </div>
+    -->

@@ -90,6 +90,7 @@ include_once 'include/users.php';
 
 <body>
     <div class="container-fluid" id="page">
+    
         <div class="container-fluid" id="header">
             <div class="row">
                 <div class="col-md-8">
@@ -149,9 +150,27 @@ include_once 'include/users.php';
                     </ul>
                 </div>
             </div>
+            
             <form action="" method="post">
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
+                    <?php
+                $users = new Users();
+                if(isset($_POST['btnSignUp'])){
+                   $users->setNamec($_POST['namec']);
+                   $users->setLastname($_POST['lastname']);
+                   $users->setCode($_POST['code']);
+                   $users->setEmail($_POST['email']);
+                   $users->setUsername($_POST['username']);
+                   $users->setPass($_POST['pass']);
+                   $users->setVpass($_POST['vpass']);
+                   $users->setSquest1($_POST['squest1']);
+                   $users->setSanswer1($_POST['sanswer1']);
+                   $users->setSquest2($_POST['squest2']);
+                   $users->setSanswer2($_POST['sanswer2']);
+                   $users->signUp();
+                }
+            ?>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <input type="text" name="namec" placeholder="Nombres">
@@ -298,16 +317,6 @@ include_once 'include/users.php';
                 </div>
                 <div class="clearfix"></div>
         </div>
-        <?php
-                $users = new Users();
-                if(isset($_POST['btnSignUp'])){
-                    $users->setNamec($_POST['namec']);
-                    $users->setLastname($_POST['lastname']);
-                    $users->getCode($_POST['code']);
-                    $users->setEmail($_POST['email']);
-                    $users->signUp();
-                }
-            ?>
         </form>
     </div>
     <div class="container-fluid" id="header">
