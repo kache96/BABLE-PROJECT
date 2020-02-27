@@ -3,52 +3,42 @@
     padding: 0;
     font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
+/* 1. BACKGROUND BANKSY IMAGE */
 body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
-.container-fluid{
-    display: block;
-}
-.wizard{
-    text-align: center;
-}
-.wizard > div.wizard-inner {
-    position: relative;
-}
+/* 2. REGISTRATION WIZARD */
+/* 2.2 Wizard underline */
 .nav-tabs {
     border-bottom: none;
+    padding-top: 10%;
+    padding-bottom: 5%;
 }
-.wizard .nav-tabs > li {
-    width: 25%;
+
+/* 9. Form lengh */
+form{
+    margin-left: 15%;
+    margin-right: 15%;
 }
-span.round-tab {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    display: inline-block;
-    border-radius: 100px;
-    background: #f8f9fa;;
-    border: 2px solid #e0e0e0;
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    font-size: 25px;
+
+/* 2.4 Wizard icons bar middle */
+.wizard-inner{
+    margin-left: 15%;
+    margin-right: 15%;
 }
-.wizard li.active span.round-tab i{
-    color: rgb(155, 0, 0);
+/* 2.4 Wizard space between icons */
+.wizard .nav-tabs > li{
+    margin-left: 11%;
 }
+/* 2.4 Wizard icons borderline */
 .wizard .nav-tabs > li a{
-    width: 70px;
-    height: 70px;
-    margin: 20px auto; 
-    padding: 7px;
-    color: #e0e0e0;
+    width: 100%;
+    padding: 10px;
     border-top: solid rgb(155, 0, 0) 4px;
 }
+/* 2.5 Wizard active icon color */
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
     color: rgb(155, 0, 0);
     background-color: transparent;
@@ -57,16 +47,7 @@ span.round-tab {
     border-top: solid rgb(155, 0, 0) 7px;
     border-bottom: none;
 }
-.nav-tabs>li.disabled>a:focus{
-    color: rgb(255, 255, 255);
-
-}
-.nav>li.disabled>a:hover{
-    background-color: transparent;
-    color: rgba(155, 0, 0, 0.568) ;
-    border-top: solid rgba(155, 0, 0, 0.568) 7px;
-
-}
+/* 2.6 Wizard icons hover */
 .nav>li>a:hover{
     border-left: none;
     border-right: none;
@@ -75,11 +56,20 @@ span.round-tab {
     background-color: transparent;
     color: rgba(155, 0, 0, 0.568);
 }
-.material-icons{
-    font-size: 50px;}
-ul{
-    padding-top: 3%;
+/* 2.5 Wizard disable icon color */
+.nav>li.disabled>a{
+    color: rgb(255, 255, 255);
 }
+/* 2.5 Wizard disable icon hover */
+.nav>li.disabled>a:hover, .nav>li.disabled>a:focus{
+    color: rgba(155, 0, 0, 0.568);
+}
+
+/* 2.7 Wizard icons size */
+.material-icons{
+    font-size: 50px;
+}
+/* 3. PAGE HEADER */
 #header{
     background: transparent;
     width: 100%;
@@ -89,45 +79,52 @@ ul{
     padding-left: 3%;
     padding-right: 3%;
 }
+/* 3.1 Header logo */
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
 #logo{
-    min-height: 60px;
-    min-width: 100%;
-    background-position: left;    background-size: 7%; 
+    height: 40px;
+    background-size: 50px; 
     background-repeat: no-repeat;  
-    background-image: url(../img/logo.png);
+    background-image: url(../img/Logos/logow.png);
 }
+/* 3.2 Header logo hover */
 #logo:hover{
-    background-image: url(../img/logor.png);
+    background-image: url(../img/Logos/logor.png);
 }
+/* 4. BABLE NAME IMAGE*/
 #title{
-    min-height: 160px;
-    min-width: 100%;
+    height: 150px;
+    background-size: 300px; 
     background-position: center;    
-    background-size: 60%; 
     background-repeat: no-repeat; 
-    background-image: url(../img/titlewh.png);
+    background-image: url(../img/Logos/titlewh.png);
 }
+/* 4.1 Bable name image hover */
 #title:hover{
-    background-image: url(../img/titlerh.png);
+    background-image: url(../img/Logos/titlerh.png);
 }
+/* 5. TEXT "CREATE ACCOUNT" */
 #titlep{
     text-align: center;
     color: white;
 }
+/* 6. Div "Sign in" button */
 #reg{
-    padding-top: 0.7%;
+    padding-top: 1%;
     text-align: right;
 }
+/* 7. "Sign in" button hover */
 #login:hover{
     color: rgb(155, 0, 0);
 }
+/* 7. Div all page content*/
+
 #content{
-    max-width: 50%;
-    max-height: 100%;
-    background: transparent;
-    display: block;
-    padding-top: 1%;
-    padding-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
 
 }
 #login{
@@ -176,7 +173,7 @@ select{
 }
 button{
     color: rgb(70, 70, 70);
-    background-image: url(../img/figures.gif);
+    background-image: url(../img/Gifs/figures.gif);
     background-size: 100% ;
     padding: 9px;
     border-radius: 2.5px;
