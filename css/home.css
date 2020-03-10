@@ -1,16 +1,23 @@
+@font-face {
+    font-family: Antonio;
+    src: url(../fonts/Antonio-Bold.ttf);
+}
 * {
     margin: 0;
     padding: 0;
     font: 18px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
+/* 1. BACKGROUND */
 body{
     background-color: white;
 }
+/* 2. CONTAINER-FLUID PAGE */
 .container-fluid{
     padding: 0;
     margin: 0;
-
 }
+/* 3. NAVBAR */
+/* 3.1 Nav bar */
 .navbar-default{
     background-color: transparent;
     border: none;
@@ -18,33 +25,37 @@ body{
     padding: 1%;
     margin: 0;
 }
+/* 3.2 Navbar left elements*/
+.navbar-left{
+    height: 60px;
+    padding-top: 5px;
+}
+/* 3.2 Navbar logo space */
+.navbar-brand{
+    width: 60px;
+    margin: 0;
+}
+/* 3.3 Navbar logo */
+a.navbar-brand{
+    background-position: center;   
+    background-size: 100%; 
+    background-repeat: no-repeat;  
+    background-image: url(../img/Logos/logor.png);
+}
+/* 3.3 Navbar "welcome" text */
 .navbar-nav.navbar-center{
     position: absolute;
     left: 75%;
     padding-top: 19px;
 }
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    background-color: transparent;
-    border: none;
-}
+#welcome{
+    color: rgb(155, 0, 0);
+    width: 100%;
 
-.navbar-brand{
-    width: 60px;
-    margin: 0;
-}
-a.navbar-brand{
-    background-position: center;   
-    background-size: 100%; 
-    background-repeat: no-repeat;  
-    background-image: url(../img/logor.png);
-}
-.navbar-left{
-    height: 60px;
-    padding-top: 5px;
 }
 .dropdown-menu>li>a>{
     text-align: center;
-    padding-top: 0;
+    padding-top: 20px;
 }
 .dropdown-menu>li>a:hover{
     color: #9b0000;
@@ -59,14 +70,6 @@ a.navbar-brand{
     box-shadow: none;
     border-radius: 0;
     border-right: solid rgb(155, 0, 0) 1px;
-}
-.navbar-right .dropdown-menu{
-    right: 20px;
-}
-#welcome{
-    color: rgb(155, 0, 0);
-    width: 100%;
-
 }
 .material-icons{
     font-size: 45px;
@@ -105,122 +108,140 @@ a.navbar-brand{
     background-color: transparent;
     background-size: 100%;
 }
-form{
-    max-width: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-#steps{
-    width: 30%;
-}
-#subtitle{
-    color: #9b0000;
-    font-weight: 700;
-    font-size: x-large;
-}
-#language{
-    width: 100%;
-    padding-top: 1%;
+/* 8. REGISTRATION WIZARD */
+/* 8.1 Wizard  */
+.wizard-inner{
+    margin-left: 2%;
+    margin-right: 2%;
     text-align: center;
 }
-#idioma{
-    width: 13%;
-    padding: 0;
-    border-radius: 2%;
-}
-#idioma:hover{
-    border-top: solid rgb(155, 0, 0) 5px;
-    border-left: solid rgb(155, 0, 0) 5px;
-    border-right: solid #00275b 5px;
-    border-bottom: solid #00275b 5px;
-}
-#footer{
-    background-image: url(../img/back3.png);
-    background-size: 100%;
-    padding-top: 0.7%;
-    text-align: center;
-    color: white;
-}
-.wizard{
-    text-align: center;
-    width: 100%;
-    margin-left: 10%;
-    margin-bottom: 2%;
-    display: block;
-}
+/* 8.2 Wizard icons bar */
 .nav-tabs {
-    border-bottom: none;
-}
-.nav-tabs>li>a{
     border: none;
-    color: black;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
-.nav-tabs>li>a:hover{
-    border: none;
-    background-color: transparent;
+/* 8.3 Wizard icons size */
+#steps{
+    width: 70px;
+    box-shadow: 0px 0px 10px rgb(151, 151, 151);
+    border-radius: 100%;
+    border: 1px transparent;
 }
-.wizard .nav-tabs > li {
-    width: 20%;
-}
-.wizard .nav-tabs > li:hover {
-    background: transparent;
-    border-bottom: solid #00275b 5px;
 
 
+/* 8.4 Wizard space between icons */
+.wizard .nav-tabs > li{
+    margin-left: 9%;
+    width: 13%;
 }
-.nav-tabs>li.active>a{
-    border-bottom: solid #00275b 5px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    color: #000;
+.nav>li:hover{
+    position: relative;
+    animation: stepEffect 4s infinite;
+
 }
-.nav-tabs>li.active>a:hover{
-    background-color: transparent;
+    @keyframes stepEffect {
+        0%   {top:0px;}
+        25%  {top:50px;}
+        50%  {top:0px;}
+        75%  {top:50px;}
+        100% {top:0px;}
+      }
+/* 8.5 Wizard icons borderline */
+.wizard .nav-tabs > li a{
+    box-sizing: 1100px;
     border: none;
-    color: #000;
-}
-.nav-tabs>li.active>a:focus{
-    background-color: transparent;
-    border: none;
-    color: #000;
-}
-input{
-    border-style: none;
-    border-radius: 0;
-    padding: 4%;
-    background: #FEFDFD;
     width: 100%;
 }
-input:focus, button:focus, select:focus{
-    outline: none;
+/* 8.6 Wizard icons hover */
+.nav>li>a:hover{
+    border: none;
+    background-color: transparent;
+    color: rgb(15, 15, 15);
 }
-.form-group{
-    margin-bottom: 6px;
-    padding-left: 3px;
-    padding-right: 3px;
+/* 8.7 Wizard active icon color */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    color: rgb(15, 15, 15);
+    background-color: transparent;
+    border: none;
+
 }
-select{
-    border-style: none;
-    border-radius: 0;
-    padding: 4%;
-    background: #FEFDFD;
-    width: 100%;
+/* 8.8 Wizard disable icon color */
+.nav>li.disabled>a{
+    color: transparent;
 }
-button{
-    color: rgb(70, 70, 70);
-    background-image: url(../img/figures.gif);
+/* 8.9 Wizard disable icon hover */
+.nav>li.disabled>a:hover, .nav>li.disabled>a:focus{
+    color: rgb(15, 15, 15);
+}
+form{
+    margin-left: 15%;
+    margin-right: 18%;
+}
+#branches{
+    text-align: center;
+}
+#btnbranch{
+    color: rgb(0, 0, 0);
+    background-image: url(../img/Options/branches/bubles.png);
     background-size: 100% ;
-    padding: 9px;
+    background-repeat: no-repeat;
+    padding-top: 9px;
     border-radius: 2.5px;
-    border-style: none;
-    margin-top: 15px;
+    border: 1px solid #9b0000;
     width: 100%;
 }
-button:focus{
+#btnword{
+    font-family: Antonio;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+}
+/* 10.1 Buttons hover */
+#btnbranch:hover{
+    color: #9b0000;
+}
+/* 10.2 Buttons focus */
+#btnbranch:focus{
     color: rgb(155, 0, 0);
     border: solid rgb(155, 0, 0) 1px;
 }
-button:hover{
-    color: rgb(155, 0, 0);
+#branchC{
+    margin-bottom: 20%;
+}
+#branchImg{
+    width: 41%;
+    margin-right: 5%;
+    padding-top: 5%;
+    padding-left: 3%;
+    border: 1px transparent;
+    transition: transform 4s, box-shadow, padding;
+}
+#branchImg:hover{
+    transform: scale(1.5);
+    box-shadow: 0px 0px 10px rgb(151, 151, 151);
+    padding: 0;
+}
+#langImg{
+    width: 20%;
+    margin-right: 3%;
+    padding-top: 5%;
+    padding-left: 3%;
+    border-radius: 30%;
+    border: 1px transparent;
+    transition: padding;
+}
+#langImg:hover{
+    padding: 0;
+}
+.next-step, .prev-step{
+    color: rgb(0, 0, 0);
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+    border-radius: 2.5px;
+    border: none;
+    width: 100%;
+}
+.next-step:hover, .prev-step:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(155, 0, 0);
 }

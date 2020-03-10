@@ -12,17 +12,19 @@ include_once 'include/users.php';
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="stylesheet" type="text/css" href="css/backChange.css">
+    <link rel="stylesheet" type="text/css" href="css/wizard.css">
     <script type="text/javascript" src="js/bable.js"></script>
     <title>Bable | Crear cuenta</title>
 </head>
+
 <body>
-    <div class="container-fluid" id="page">
+    <div class="container-fluid">
         <div class="container-fluid" id="header">
             <div class="row">
                 <div class="col-md-2">
                     <div id="logo">
-                        <img src="" >
+                        <img src="">
                     </div>
                 </div>
                 <div class="col-md-10" id="reg">
@@ -79,27 +81,12 @@ include_once 'include/users.php';
                     </ul>
                 </div>
             </div>
-            
+
             <form action="" method="post">
+                <?php include_once 'include/usersFields.php';?>
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
-                    <?php
-                $users = new Users();
-                if(isset($_POST['btnSignUp'])){
-                   $users->setNamec($_POST['namec']);
-                   $users->setLastname($_POST['lastname']);
-                   $users->setCode($_POST['code']);
-                   $users->setEmail($_POST['email']);
-                   $users->setUsername($_POST['username']);
-                   $users->setPass($_POST['pass']);
-                   $users->setVpass($_POST['vpass']);
-                   $users->setSquest1($_POST['squest1']);
-                   $users->setSanswer1($_POST['sanswer1']);
-                   $users->setSquest2($_POST['squest2']);
-                   $users->setSanswer2($_POST['sanswer2']);
-                   $users->signUp();
-                }
-            ?>
+
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <input type="text" name="namec" placeholder="Nombres">
@@ -125,14 +112,16 @@ include_once 'include/users.php';
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step2">
                         <div class="form-group col-md-12">
-                        <small id="info">El nombre de usuario debe contener minimo 4 caracteres y maximo 64. Ademas, debe ser diferente al nombre, apellido y correo electronico.</small>
+                            <small id="info">El nombre de usuario debe contener minimo 4 caracteres y maximo 64. Ademas,
+                                debe ser diferente al nombre, apellido y correo electronico.</small>
                             <input type="text" name="username" id="nameUser" placeholder="Nombre de usuario">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <input type="password" name="pass" placeholder="Contraseña">
                                 <small id="info">La contraseña debe tener al menos 8 caracteres, 1 caracter numerico y 1
-                                    mayuscula. Ademas, debe ser diferente al nombre, apellido y correo electronico.</small>
+                                    mayuscula. Ademas, debe ser diferente al nombre, apellido y correo
+                                    electronico.</small>
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="password" name="vpass" placeholder="Repetir contraseña">
@@ -154,7 +143,8 @@ include_once 'include/users.php';
                             <div class="form-group col-md-12" id="questinfo">
                                 <h4><b>Preguntas de seguridad</b></h4>
                                 <p>Selecciona dos preguntas de seguridad y escribe su respuesta correspondiente. Estas
-                                    preguntas nos ayudaran a verificar tu identidad en caso de que olvides tu contraseña.
+                                    preguntas nos ayudaran a verificar tu identidad en caso de que olvides tu
+                                    contraseña.
                                     <br>
                                     <small>Por favor, escribe una respuesta que puedas recordar con facilidad y ten
                                         presente que las preguntas que selecciones deberan ser diferentes.</small>
@@ -223,9 +213,11 @@ include_once 'include/users.php';
                             <div class="col-md-12" id="info">
                                 <p><b>¡PARECE QUE TODO VA BIEN!</b>
                                     <br>
-                                    Por ultimo, por favor haz click en el boton "crear cuenta" para finalizar tu proceso de registro en Bable.
+                                    Por ultimo, por favor haz click en el boton "crear cuenta" para finalizar tu proceso
+                                    de registro en Bable.
                                     <br>
-                                    Recuerda que para iniciar sesion, utilizaras el nombre de usuario que anteriormente elegiste y la contraseña. 
+                                    Recuerda que para iniciar sesion, utilizaras el nombre de usuario que anteriormente
+                                    elegiste y la contraseña.
                                     <br><br>
                                     Esperamos que Bable sea de tu agrado, muchas gracias por elegirnos.
                                 </p>
