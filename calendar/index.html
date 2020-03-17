@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <link rel="stylesheet" href="css/fullcalendar.min.css">
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/es.js"></script>
+
+    <link rel="stylesheet" href="css/calendar.css">
+    <script src="js/optionsCalendar.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <title>Bable | Calendar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-7">
+                <div id="bubleCalendar"></div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#bubleCalendar').fullCalendar({
+                header: {
+                    left: 'today, prev, next',
+                    center: 'title',
+                    right: 'month, basicWeek, basicDay, agendaWeek, agendaDay'
+                },
+                dayClick: function (date, jsEvent, view) {
+                    $("#bookDate").val(date.format());
+                    $("#scheduleModal").modal();
+                },
+                events: 'http://localhost/calendar/include/calendarEvents.php',
+                eventClick: function (calEvent, jsEvent, view) {
+                    $('#studentName').html(calEvent.title);
+                    $('#studentCode').val(calEvent.studentCode);
+                    $('#bookType').val(calEvent.bookType);
+                    $('#bookSubtype	').val(calEvent.bookSubtype	);
+                    $('#numberClass').val(calEvent.numberClass);
+                    $('#numberUnit').val(calEvent.numberUnit);
+
+                    dateTime = calEvent.start._i.split(" ");
+                    $('#bookDate').val(dateTime[0]);
+                    $('#bookTime').val(dateTime[1]);
+
+
+                    $("#scheduleModal").modal();
+                }
+
+            });
+        });
+
+
+    </script>
+
+    <div class="modal fade" id="scheduleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Reservar</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 id="studentName"></h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 id="studentCode"></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Tipo</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="bookType" id="bookType">
+                                        <option selected value="Class" onclick="displayClase()">Clase</option>
+                                        <option value="Quiz" onclick="displayQuiz()">Quiz</option>
+                                        <option value="Final exam" onclick="displayQuiz()">Examen final</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div id="typeQuiz"></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>¿Repeticion?</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="radio" name="bookSubtype" id="bookSubtype" value="Repeticion">Si
+                                    <input type="radio" name="bookSubtype" id="bookSubtype" value="Primera vez">No
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Unidad(es)</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="numberClass" id="numberClass">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="numberUnit" id="numberUnit">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Fecha</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <input id="bookDate" name="bookDate" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Hora</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="time" id="bookTime" name="bookTime">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" name="btnDelete" class="btn btn-secondary" data-dismiss="modal">Cancelar
+                        reserva</button>
+                    <button type="button" name="btnSave" id="btnSave"class="btn btn-primary">Reservar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var newEvent;
+
+        $('#btnSave').click(function(){
+            
+            eventData();
+            insertData('create',newEvent);
+
+        });
+
+        function eventData(){
+            newEvent = {
+                title: "PERRA",
+                studentCode: "4567",
+                bookType: $('#bookType').val(),
+                bookSubtype: $('#bookSubtype').val(),
+                numberClass: $('#numberClass').val(),
+                numberUnit: $('#numberUnit').val(),
+                start: $('#bookDate').val()+" "+$('#bookTime').val(),
+                end: $('#bookDate').val()+" "+$('#bookTime').val(),
+                textColor: "#FFFFFF",
+                color: "#9b0000"
+
+
+            };
+        }
+
+        function insertData(action, objEvento){
+            $.ajax({
+                type:'POST',
+                url:'include/calendarEvents.php?action='+action,
+                data: objEvento,
+                success: function(msg){
+                    if(msg){
+                        $('#bubleCalendar').fullCalendar('refetchEvents');
+                        $("#scheduleModal").modal('toggle');
+
+                    }
+                },
+                error:function(){
+                    alert("Error");
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

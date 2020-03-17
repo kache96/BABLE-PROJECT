@@ -1,0 +1,12 @@
+.modal-header{
+    padding-left: 38%;
+}
+#bookDate{
+    border: none;
+    cursor: default;
+}
+#bookDate:disabled {
+    color: black;
+    cursor: default;
+    background-color: transparent;
+}
