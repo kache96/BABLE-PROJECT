@@ -10,9 +10,10 @@ class CalendarEvent extends DB{
                 switch($action){
                 case 'create':
                         echo "INSERTING DATA";
-                        $query = $this->connect()->prepare("INSERT INTO calendarevent(title, studentCode, bookType, bookSubtype, numberClass, numberUnit, start, end, textColor, color) VALUES(:title, :studentCode, :bookType, :bookSubtype, :numberClass, :numberUnit, :start, :end, :textColor, :color)");
+
+                        $query = $this->connect()->prepare("INSERT INTO calendarevent(title, studentCode, bookType, bookSubtype, numberClass, numberUnit, start, textColor, color) VALUES(:title, :studentCode, :bookType, :bookSubtype, :numberClass, :numberUnit, :start, :textColor, :color)");
                         
-                        $create = $query->execute(array(
+                        $answer = $query->execute(array(
                                 "title" =>$_POST['title'],
                                 "studentCode" =>$_POST['studentCode'],
                                 "bookType" =>$_POST['bookType'],
@@ -20,23 +21,50 @@ class CalendarEvent extends DB{
                                 "numberClass" =>$_POST['numberClass'],
                                 "numberUnit" =>$_POST['numberUnit'],
                                 "start" =>$_POST['start'],
-                                "end" =>$_POST['end'],
                                 "textColor" =>$_POST['textColor'],
                                 "color" =>$_POST['color']
                         ));
-                        if($create){
-                                echo json_encode($create);
+                        if($answer){
+                                echo json_encode($answer);
                             }else{
-                                echo "No se insertaron los datos";
+                                echo "No se ha podido insertar datos";
                             }
-
 
                 break;
                 case 'update':
                         echo "UPDATING DATA";
+                        $query = $this->connect()->prepare('UPDATE calendarevent SET
+                        bookType = :bookType, bookSubtype = :bookSubtype, numberClass = :numberClass, numberUnit = :numberUnit, start = :start, end = :end WHERE event_id = :event_id');
+
+                        $answer = $query->execute(array(
+                                "event_id"=>$_POST['id'],
+                                "bookType" =>$_POST['bookType'],
+                                "bookSubtype" =>$_POST['bookSubtype'],
+                                "numberClass" =>$_POST['numberClass'],
+                                "numberUnit" =>$_POST['numberUnit'],
+                                "start" =>$_POST['start'],
+                        ));
+                        if($answer){
+                                echo json_encode($answer);
+                            }else{
+                                echo "No se pudo actualizar";
+                            }
+
                 break;
                 case 'delete':
-                        echo "DELETING DATA";
+                        $answer = false;
+
+                        $query = $this->connect()->prepare('DELETE FROM calendarevent WHERE event_id=:event_id');
+
+                        $answer = $query->execute(array(
+                                "event_id"=>$_POST['id']
+                        ));
+                        if($answer){
+                                echo json_encode($answer);
+                            }else{
+                                echo "No se pudo eliminar";
+                            }
+
                 break;
                 default:
 

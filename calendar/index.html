@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="css/calendar.css">
     <script src="js/optionsCalendar.js"></script>
 
+    <link rel="stylesheet" href="css/bootstrap-clockpicker.css">
+    <script src="js/bootstrap-clockpicker.js"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -46,15 +49,28 @@
                     right: 'month, basicWeek, basicDay, agendaWeek, agendaDay'
                 },
                 dayClick: function (date, jsEvent, view) {
+                    $("#btnSave").prop("disabled",false);
+                    $("#btnDelete").prop("disabled",true);
+                    $("#btnUpdate").prop("disabled",true);
+
+                    addEvent();
                     $("#bookDate").val(date.format());
-                    $("#scheduleModal").modal();
+                    $("#crudModal").modal();
                 },
-                events: 'http://localhost/calendar/include/calendarEvents.php',
+                events: {
+                    url: 'http://localhost/calendar/include/calendarEvents.php'
+                },
+
                 eventClick: function (calEvent, jsEvent, view) {
+                    $("#btnSave").prop("disabled",true);
+                    $("#btnDelete").prop("disabled",false);
+                    $("#btnUpdate").prop("disabled",false);
+
+                    $('#event_id').val(calEvent.event_id);
                     $('#studentName').html(calEvent.title);
-                    $('#studentCode').val(calEvent.studentCode);
+                    $('#studentCode').html(calEvent.studentCode);
                     $('#bookType').val(calEvent.bookType);
-                    $('#bookSubtype	').val(calEvent.bookSubtype	);
+                    $('#bookSubtype	').val(calEvent.bookSubtype);
                     $('#numberClass').val(calEvent.numberClass);
                     $('#numberUnit').val(calEvent.numberUnit);
 
@@ -63,7 +79,7 @@
                     $('#bookTime').val(dateTime[1]);
 
 
-                    $("#scheduleModal").modal();
+                    $("#crudModal").modal();
                 }
 
             });
@@ -71,8 +87,8 @@
 
 
     </script>
-
-    <div class="modal fade" id="scheduleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<form action="include/calendarEvents.php" method="post">
+    <div class="modal fade" id="crudModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -91,6 +107,11 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4 id="studentCode"></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input id="event_id" name="event_id" disabled>
                                 </div>
                             </div>
                             <div class="row">
@@ -113,7 +134,6 @@
                                 </div>
                                 <div class="col-md-6">
                                     <input type="radio" name="bookSubtype" id="bookSubtype" value="Repeticion">Si
-                                    <input type="radio" name="bookSubtype" id="bookSubtype" value="Primera vez">No
                                 </div>
                             </div>
                             <div class="row">
@@ -121,10 +141,15 @@
                                     <p>Unidad(es)</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="numberClass" id="numberClass">
+                                    <input type="text" name="numberUnit" id="numberUnit">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Clase #</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="numberUnit" id="numberUnit">
+                                    <input type="text" name="numberClass" id="numberClass">
                                 </div>
                             </div>
                             <div class="row">
@@ -140,64 +165,89 @@
                                     <p>Hora</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="time" id="bookTime" name="bookTime">
+                                    <div class="input-group clockpicker" data-placement="left" data-align="top"
+                                        data-autoclose="true">
+                                        <input type="text" id="bookTime" name="bookTime" value="00:00">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-time"></span>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" name="btnDelete" class="btn btn-secondary" data-dismiss="modal">Cancelar
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar
                         reserva</button>
-                    <button type="button" name="btnSave" id="btnSave"class="btn btn-primary">Reservar</button>
+                    <button type="button" id="btnSave" class="btn btn-primary">Reservar</button>
+                    <button type="button" id="btnDelete" class="btn btn-primary">Eliminar</button>
+                    <button type="button" id="btnUpdate" class="btn btn-primary">Actualizar</button>
                 </div>
             </div>
         </div>
     </div>
+</form>
     <script>
         var newEvent;
 
-        $('#btnSave').click(function(){
-            
+        $('#btnSave').click(function () {
             eventData();
-            insertData('create',newEvent);
-
+            sendDataEvent('create', newEvent);
+        });
+        $('#btnDelete').click(function () {
+            eventData();
+            sendDataEvent('delete', newEvent);
+        });
+        $('#btnUpdate').click(function () {
+            eventData();
+            sendDataEvent('update', newEvent);
         });
 
-        function eventData(){
+        function eventData() {
             newEvent = {
-                title: "PERRA",
+                id: $('#event_id').val(),
+                title: "Juanita",
                 studentCode: "4567",
                 bookType: $('#bookType').val(),
                 bookSubtype: $('#bookSubtype').val(),
                 numberClass: $('#numberClass').val(),
                 numberUnit: $('#numberUnit').val(),
-                start: $('#bookDate').val()+" "+$('#bookTime').val(),
-                end: $('#bookDate').val()+" "+$('#bookTime').val(),
+                start: $('#bookDate').val() + " " + $('#bookTime').val(),
                 textColor: "#FFFFFF",
                 color: "#9b0000"
-
-
             };
         }
 
-        function insertData(action, objEvento){
+        function sendDataEvent(accion, objEvento) {
             $.ajax({
-                type:'POST',
-                url:'include/calendarEvents.php?action='+action,
+                method: 'post',
+                url: 'include/calendarEvents.php?action=' + accion,
                 data: objEvento,
-                success: function(msg){
-                    if(msg){
+                success: function (msg) {
+                    if (msg) {
                         $('#bubleCalendar').fullCalendar('refetchEvents');
-                        $("#scheduleModal").modal('toggle');
-
+                        $("#crudModal").modal('toggle');
                     }
                 },
-                error:function(){
-                    alert("Error");
+                error: function () {
+                    window.location.replace("index.html");
+                    //alert("JUEPUTAAA");
                 }
-            })
+            });
         }
+
+        $('.clockpicker').clockpicker();
+        function addEvent() {
+            $('#event_id').val('');
+            $('#studentName').html('');
+            $('#studentCode').html('');
+            $('#bookType').val('');
+            $('#bookSubtype	').val('');
+            $('#numberClass').val('');
+            $('#numberUnit').val('');
+        }
+
     </script>
 </body>
 
