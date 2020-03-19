@@ -3,92 +3,213 @@
     padding: 0;
     font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
-.wizard > div.wizard-inner {
-    position: relative;
-    margin-bottom: 10%;
+/* 1. BACKGROUND BANKSY IMAGE */
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.connecting-line {
-    height: 1%;
-    background: #e0e0e0;
-    position: absolute;
-    width: 80%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 50%;
-    z-index: 1;
-}
-.wizard .nav-tabs > li {
-    width: 25%;
-}
-span.round-tab {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    display: inline-block;
-    border-radius: 100px;
-    background: #f8f9fa;;
-    border: 2px solid #e0e0e0;
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    font-size: 25px;
-}
-.wizard li.active span.round-tab i{
-    color: #7bb4ff;
-}
-.wizard .nav-tabs > li a {
-    width: 70px;
-    height: 70px;
-    margin: 20px auto;
-    border-radius: 100%;
+/* 2. CONTAINER-FLUID PAGE */
+.container-fluid{
+    margin: 0;
     padding: 0;
-    color: #e0e0e0;
-    
 }
-ul{
-    list-style:none;
-}
+/* 3. PAGE HEADER */
+/* 3.1 Container-fluid header */
 #header{
     background: transparent;
     width: 100%;
+    height: 50%;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 3%;
     padding-right: 3%;
 }
+/* 3.2 Header logo */
+#logo{
+    height: 40px;
+    background-size: 50px; 
+    background-repeat: no-repeat;  
+    background-image: url(../img/Logos/logow.png);
+}
+/* 3.3 Header logo hover */
+#logo:hover{
+    background-image: url(../img/Logos/logor.png);
+}
+/* 4. DIV "SIGN IN" BUTTON */
 #reg{
-    padding-top: 2%;
+    padding-top: 1%;
+    height: 40px;
     text-align: right;
 }
-h2{
-    color: white;
-    font-family: 'Pacifico', cursive;
-    font-size: xx-large;
-}
-#content{
-    max-width: 50%;
-    background: transparent;
-    text-align: center;
-    display: block;
-    padding-top: 4%;
-    padding-bottom: 5%;
-
-}
-#register{
+/* 5. "SIGN IN" BUTTON */
+#login{
     color: #939192;
     background: #FEFDFD;
     padding: 9px;
     border-radius: 2px;
     width: 130px;
 }
-.form-control{
+/* 5. "Sign in" button hover */
+#login:hover{
+    color: rgb(155, 0, 0);
+}
+/* 6. BABLE NAME IMAGE*/
+#title{
+    height: 150px;
+    background-size: 300px; 
+    background-position: center;    
+    background-repeat: no-repeat; 
+    background-image: url(../img/Logos/titlewh.png);
+}
+/* 6.1 Bable name image hover */
+#title:hover{
+    background-image: url(../img/Logos/titlerh.png);
+}
+/* 7. TEXT "CREATE ACCOUNT" */
+#titlep{
+    text-align: center;
+    color: white;
+}
+/* 7. CONTAINER-FLUID "CONTENT"*/
+#content{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+/* 8. REGISTRATION WIZARD */
+/* 8.1 Wizard  */
+.wizard-inner{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+/* 8.2 Wizard icons bar */
+.nav-tabs {
+    border-bottom: none;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+/* 8.3 Wizard icons size */
+.material-icons{
+    font-size: 50px;
+}
+/* 8.4 Wizard space between icons */
+.wizard .nav-tabs > li{
+    margin-left: 11%;
+}
+/* 8.5 Wizard icons borderline */
+.wizard .nav-tabs > li a{
+    width: 100%;
+    padding: 10px;
+    border-top: solid rgb(155, 0, 0) 4px;
+}
+/* 8.6 Wizard icons hover */
+.nav>li>a:hover{
+    border-left: none;
+    border-right: none;
+    border-top: solid rgba(155, 0, 0, 0.568) 7px;
+    border-bottom: none;
+    background-color: transparent;
+    color: rgba(155, 0, 0, 0.568);
+}
+/* 8.7 Wizard active icon color */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    color: rgb(155, 0, 0);
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: solid rgb(155, 0, 0) 7px;
+    border-bottom: none;
+}
+/* 8.8 Wizard disable icon color */
+.nav>li.disabled>a{
+    color: rgb(255, 255, 255);
+}
+/* 8.9 Wizard disable icon hover */
+.nav>li.disabled>a:hover, .nav>li.disabled>a:focus{
+    color: rgba(155, 0, 0, 0.568);
+}
+/* 9. FORM */
+/* 9.1 Form group spaces */
+.form-group{
+    margin-bottom: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+/* 9.2 Input text, password, email */
+input[type="text"], input[type="password"], input[type="email"] {
     border-style: none;
     border-radius: 0;
     padding: 4%;
     background: #FEFDFD;
+    width: 100%;
 }
-.form-control:focus{
-    -webkit-box-shadow: none;
+/* 9.3 Text "p" color */
+#info{
+    color: white;
+}
+/* 9.4 Input text nameUser */
+#nameUser{
+    min-height: 10px;
+    padding-left: 14px;
+}
+/* 9.5 Questions text "p" */
+#questinfo{
+    text-align: justify;
+    color: white;
+}
+/* 9.6 Questions selects */
+select{
+    border-style: none;
+    border-radius: 0;
+    padding: 4%;
+    background: #FEFDFD;
+    width: 100%;
+}
+/* 9.7 Input "ranswer" answer2 */
+#ranswer{
+    margin-bottom: 20px;
+}
+/* 9.8 Input, button and select focus */
+input:focus, select:focus{
+    outline: none;
+}
+/* 9.9 Buttons */
+button{
+    color: rgb(70, 70, 70);
+    background-image: url(../img/Gifs/figures.gif);
+    background-size: 100% ;
+    padding: 9px;
+    border-radius: 2.5px;
+    border-style: none;
+    margin-top: 15px;
+    width: 100%;
+}
+/* 9.9.1 Buttons hover */
+button:hover{
+    color: rgb(155, 0, 0);
+}
+/* 9.9.2 Buttons focus */
+button:focus{
+    color: rgb(155, 0, 0);
+    border: solid rgb(155, 0, 0) 1px;
+    outline: none;
+}
+/* 10. LINKS */
+/* 10.1 Text link color */
+a{
+    color: white;
+}
+/* 10.2 Text link hover */
+a:hover{
+    text-decoration: none;
+    color: rgb(155, 0, 0);
+}
+/* 11. ALERT PHP MESSAGE */
+#alert{
+    background-color: #00000057;
+    color: rgb(255, 255, 255);
+    border: solid rgba(0, 0, 0, 0.089) 3px;
+    width: 100%;
+    text-align:center;
+    padding: 20px;
 }
