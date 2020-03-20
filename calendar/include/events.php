@@ -94,16 +94,8 @@ include_once 'db.php';
                 ]);
         }
         public function updateEvent(){
-            if (empty($this->bookType) || empty($this->bookSubtype) || empty($this->numberClass) || empty($this->numberUnit) || empty($this->bookDate) || empty($this->bookTime))
-			{
-				?>
-				<div id="alert"><p>¡Ups! Te falto uno o varios campos por llenar. <a href="index.php"><b>Intentalo una vez mas.</b></a></p></div>
-				<?php
-				exit();
-            }
 
             $query1 = $this->connect()->prepare("UPDATE calendarevent SET
-            event_id = :event_id, 
             bookType = :bookType, 
             bookSubtype = :bookSubtype, 
             numberClass = :numberClass, 
@@ -113,22 +105,23 @@ include_once 'db.php';
             WHERE event_id = :event_id");
 
             $query1->execute([
-                ':event_id' => '2', 
+                'event_id' => $this->event_id, 
                 
-                ':bookType' => $this->bookType, 
-                ':bookSubtype' => $this->bookSubtype,
-                ':numberClass' => $this->numberClass, 
-                ':numberUnit' => $this->numberUnit,
+                'bookType' => $this->bookType, 
+                'bookSubtype' => $this->bookSubtype,
+                'numberClass' => $this->numberClass, 
+                'numberUnit' => $this->numberUnit,
 
-                ':start' => $this->bookDate,
-                ':bookTime' => $this->bookTime
+                'start' => $this->bookDate,
+                'bookTime' => $this->bookTime
                 ]);
+            
         }
         public function deleteEvent(){
 			 
-            $query2 = $this->connect()->prepare("DELETE FROM calendarevent WHERE event_id=:event_id");
+            $query2 = $this->connect()->prepare("DELETE FROM calendarevent WHERE event_id = :event_id");
             $query2->execute([
-                ':event_id' => 'event_id'
+                'event_id' => $this->event_id
                 ]);
         }
     }
