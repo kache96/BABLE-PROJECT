@@ -22,15 +22,3 @@ input, select {
     text-align:center;
     padding: 20px;
 }
-.datepicker thead {
-    background-color: green !important;
-
-}
-.datepicker.dropdown-menu th, .datepicker.dropdown-menu td {
-    border-radius: 0 !important;
-
-}
-td.active.day, span.month.active, span.year.active{
-    background-image: none !important;
-    background-color: green !important;
-}

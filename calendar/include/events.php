@@ -67,10 +67,48 @@ include_once 'db.php';
         }
 
         public function createEvent(){
-			if (empty($this->bookType) || empty($this->bookSubtype) || empty($this->numberClass) || empty($this->numberUnit) || empty($this->bookDate) || empty($this->bookTime))
+			if ($this->bookType == "unspecified" || $this->bookSubtype == "unspecified" || empty($this->bookDate) || empty($this->bookTime))
 			{
 				?>
 				<div id="alert"><p>¡Ups! Te falto uno o varios campos por llenar. <a href="index.php"><b>Intentalo una vez mas.</b></a></p></div>
+				<?php
+				exit();
+            }
+
+            $day = $this->bookDate;
+            $time = $this->bookTime;
+
+            if (strpos($day, 'domingo') !== false) {
+                ?>
+				<div id="alert"><p>¡Ups! Recuerda que los domingo no hay clases. <a href="index.php"><b>Reserva en otro dia.</b></a></p></div>
+				<?php
+				exit();
+            }
+
+            if (strpos($day, 'sábado') !== false){
+                if ($time < "06:30") {
+                    ?>
+                    <div id="alert"><p>¡Ups! Recuerda que los sabados las clases inician a las 6:30am. <a href="index.php"><b>Reserva en otra hora.</b></a></p></div>
+                    <?php
+                    exit();
+                }
+                if ($time < "15:00") {
+                    ?>
+                    <div id="alert"><p>¡Ups! Recuerda que los sabados las clases finalizan a las 15:00pm. <a href="index.php"><b>Reserva en otra hora.</b></a></p></div>
+                    <?php
+                    exit();
+                }
+            }
+            
+            if ($time < "06:00") {
+                ?>
+				<div id="alert"><p>¡Ups! Recuerda que las clases inician a las 6:00am. <a href="index.php"><b>Reserva en otra hora.</b></a></p></div>
+				<?php
+				exit();
+            }
+            if ($time > "19:30") {
+                ?>
+				<div id="alert"><p>¡Ups! Recuerda que las clases finalizan a las 19:30pm. <a href="index.php"><b>Reserva en otra hora.</b></a></p></div>
 				<?php
 				exit();
             }
@@ -86,7 +124,7 @@ include_once 'db.php';
                 'numberClass' => $this->numberClass, 
                 'numberUnit' => $this->numberUnit,
 
-                'start' => $this->bookDate,
+                'start' => $this->bookDate . " " . $this->bookTime,
                 'bookTime' => $this->bookTime,
 
                 'textColor' => '#FFFFFF', 
@@ -112,7 +150,7 @@ include_once 'db.php';
                 'numberClass' => $this->numberClass, 
                 'numberUnit' => $this->numberUnit,
 
-                'start' => $this->bookDate,
+                'start' => $this->bookDate . " " . $this->bookTime,
                 'bookTime' => $this->bookTime
                 ]);
             
