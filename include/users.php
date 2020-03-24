@@ -2,6 +2,7 @@
 include_once 'db.php';
 
 	class Users extends DB{
+		
 		private $namec;
 		private $lastname;
 		private $code;
