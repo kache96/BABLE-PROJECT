@@ -66,11 +66,11 @@ body{
     background-size: 300px; 
     background-position: center;    
     background-repeat: no-repeat; 
-    background-image: url(../img/Logos/titlewh.png);
+    background-image: url();
 }
 /* 6.1 Bable name image hover */
 #title:hover{
-    background-image: url(../img/Logos/titlerh.png);
+    background-image: url();
 }
 /* 7. TEXT "CREATE ACCOUNT" */
 #titlep{
@@ -80,6 +80,7 @@ body{
 /* 7. CONTAINER-FLUID "CONTENT" */
 #content{
     max-width: 30%;
+    margin-left: 35%;
     background: transparent;
     text-align: center;
     display: block;
