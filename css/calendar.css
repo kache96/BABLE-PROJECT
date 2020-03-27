@@ -1,0 +1,190 @@
+.fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-list-view, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
+    border-color: #f8f9fa;
+}
+.fc-state-default{
+    background-image: none !important;
+    background-color: transparent !important;
+    border-radius: 0.5 !important;
+    box-shadow: none !important;
+    border: 1px solid whitesmoke !important;
+    color: black !important;
+    text-shadow: none;
+    margin: 1px !important;
+}
+.fc-state-default:hover{
+    background-color: #9b0000 !important;
+    color: white !important;
+}
+.fc-state-default:focus{
+   outline: 0;
+}
+.fc-state-disabled:disabled{
+    background-image: none !important;
+    opacity: initial;
+    box-shadow: none !important;
+}
+.fc-future:hover{
+    background-color: rgb(243, 243, 243) !important;
+}
+.fc-day-header, .fc-day-header.fc-sun{
+    background-color: whitesmoke;
+    height: 40px;
+    line-height: 3;
+    font-weight: bolder;
+}
+.fc-sun{
+    background-color: rgb(245, 245, 245);
+}
+.fc-day-number{
+    font-size: 1.1rem;
+}
+.fc-past{
+    color: rgb(192, 192, 192);
+}
+.fc-today{
+    font-weight: bolder;
+    color: #9b0000;
+    background-color: transparent !important;
+}
+.fc-today:hover{
+    background-color: rgb(243, 243, 243) !important;
+}
+.modal-header{
+    padding-left: 38%;
+    background-color: whitesmoke;
+    border-bottom: 1px solid #9b0000;
+}
+.close{
+    color: black;
+    opacity: initial;
+}
+.close:hover{
+    color: #9b0000;
+    font-size: 23px;
+    opacity: initial;
+}
+.close:focus{
+    outline: none;
+}
+#event_id{
+    border: none;
+    cursor: default;
+}
+#event_id:disabled{
+    color: black;
+    cursor: default;
+    background-color: transparent;
+}
+input, select {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    border-bottom-color: rgb(230, 230, 230);
+    width: 100%;
+    outline: none;
+}
+select:hover {
+    border: 1px solid rgb(27, 25, 25);
+}
+.custom-select:focus{
+    border: 1px solid #9b0000;
+    box-shadow: none;
+}
+input:hover{
+    border: 1px solid transparent;
+    border-bottom-color: #9b0000;
+}
+input:focus{
+    border: 1px solid #9b0000;
+    box-shadow: none;
+}
+.ui-datepicker-header{
+    background-color: whitesmoke !important;
+    border: none !important;
+
+}
+.ui-datepicker-next, .ui-datepicker-prev{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+.ui-state-default{
+    border: 1px solid #ece4e4 !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.ui-state-default:hover{
+    background-color: #9b0000 !important;
+    color: white !important;
+}
+.ui-state-highlight{
+    background-color: #cccccc !important;
+    color: #ffffff !important;
+}
+.ui-state-highlight:hover{
+    background-color: #9b0000 !important;
+    color: white !important;
+}
+.ui-state-active{
+    background-color: #9b0000 !important;
+}
+.ui-state-active:hover{
+    background-color: white !important;
+    color: black !important;
+}
+.text-primary{
+    color: #9b0000 !important;
+}
+
+/* 11. ALERT PHP MESSAGE */
+#alert{
+    background-color: whitesmoke;
+    color: black;
+    border: solid rgb(240, 240, 240) 3px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+}
+.btn-secondary{
+    color: rgb(131, 131, 131);
+    background-color: rgb(252, 252, 252);
+    background-size: 100% ;
+    padding: 9px;
+    border-radius: 2.5px;
+    border-style: none;
+}
+.btn-primary{
+    color: rgb(70, 70, 70);
+    background-color: transparent;
+    background-image: url(../img/Gifs/figures.gif);
+    background-size: 100% ;
+    padding: 9px;
+    border-radius: 2.5px;
+    border-style: none;
+    font-weight: bold;
+    border: solid whitesmoke 1px;
+
+}
+/* 9.9.1 Buttons hover */
+.btn-primary:hover{
+    color: rgb(155, 0, 0);
+    border: solid rgb(155, 0, 0) 1px;
+    background-color: transparent;
+}
+.btn-secondary:hover{
+    color: rgb(155, 0, 0);
+    background-color: rgb(240, 240, 240);
+}
+/* 9.9.2 Buttons focus */
+.btn-primary:focus, .btn-secondary:focus{
+    color: rgb(155, 0, 0);
+    border: solid rgb(155, 0, 0) 1px;
+    outline: none;
+}
+
+.modal-footer{
+    border-top: solid rgb(155, 0, 0) 1px;
+
+}
