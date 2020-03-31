@@ -1,32 +1,11 @@
-var bello = "<input type='radio'  name='branches' value='bello'><img src='img/Options/branches/bello.png' id='branchImg'>";
-var arkadia = "<input type='radio'  name='branches' value='arkadia'><img src='img/Options/branches/arkadia.png' id='branchImg'>";
-var centro = "<input type='radio'  name='branches' value='centro'><img src='img/Options/branches/centro.png' id='branchImg'>";
-var poblado = "<input type='radio'  name='branches' value='poblado'><img src='img/Options/branches/poblado.png' id='branchImg'>";
-var itagui = "<input type='radio'  name='branches' value='itagui'><img src='img/Options/branches/itagui.png' id='branchImg'>";
-var calasanz = "<input type='radio'  name='branches' value='calasanz'><img src='img/Options/branches/calasanz.png' id='branchImg'>";
-var olaya = "<input type='radio'  name='branches' value='olaya'><img src='img/Options/branches/olaya.png' id='branchImg'>";
+var branchCarouselA = "<div id='branchesCarousel' class='carousel slide' data-ride='carousel'><ol class='carousel-indicators'><li data-target='#branchesCarousel' data-slide-to='0' class='active'></li><li data-target='#branchesCarousel' data-slide-to='1'></li></ol><div class='carousel-inner'><div class='item active' id='slideBranch1'><a href='branches/branchAr.php'><div id='arkadia' class='thumbnail'></div></a><a href='branches/branchBe.html'><div id='bello' class='thumbnail'></div></a><a href='branches/branchCa.html'><div id='calasanz' class='thumbnail'></div></a><a href='branches/branchCe.html'><div id='centro' class='thumbnail'></div></a></div><div class='item' id='slideBranch2'><a href='branches/branchOl.html'><div id='olaya' class='thumbnail'></div></a><a href='branches/branchPo.html'><div id='poblado' class='thumbnail'></div></a><a href='branches/branchIt.html'><div id='itagui' class='thumbnail'></div></a></div></div><a class='left carousel-control' href='#branchesCarousel' data-slide='prev'><span class='glyphicon glyphicon-chevron-left'></span><span class='sr-only'>Previous</span></a><a class='right carousel-control' href=#branchesCarousel' data-slide='next'><span class='glyphicon glyphicon-chevron-right'></span><span class='sr-only'>Next</span></a></div>";
 
 function displayAntioquia(){
-    document.getElementById("branchA").innerHTML = bello + arkadia + centro + poblado + itagui + calasanz + olaya;
+    document.getElementById('branches').innerHTML = branchCarouselA;
 }
 
-var administrativa = "<input type='radio'  name='branches' value='administrativa'><img src='img/Options/branches/administrativa.png' id='branchImg'>";
-var centrointer = "<input type='radio'  name='branches' value='centrointer'><img src='img/Options/branches/centrointer.png' id='branchImg'>";
-var cedritos = "<input type='radio'  name='branches' value='cedritos'><img src='img/Options/branches/cedritos.png' id='branchImg'>";
-var centromayor = "<input type='radio'  name='branches' value='centromayor'><img src='img/Options/branches/centromayor.png' id='branchImg'>";
-var chapinero = "<input type='radio'  name='branches' value='chapinero'><img src='img/Options/branches/chapinero.png' id='branchImg'>";
-var chia = "<input type='radio'  name='branches' value='chia'><img src='img/Options/branches/chia.png' id='branchImg'>";
-var madelena = "<input type='radio'  name='branches' value='madelena'><img src='img/Options/branches/madelena.png' id='branchImg'>";
-var modelia = "<input type='radio'  name='branches' value='modelia'><img src='img/Options/branches/modelia.png' id='branchImg'>";
-var multiplaza = "<input type='radio'  name='branches' value='multiplaza'><img src='img/Options/branches/multiplaza.png' id='branchImg'>";
-var plazamerica = "<input type='radio'  name='branches' value='plazamerica'><img src='img/Options/branches/plazamerica.png' id='branchImg'>";
-var plazacentral = "<input type='radio'  name='branches' value='plazacentral'><img src='img/Options/branches/plazacentral.png' id='branchImg'>";
-var restrepo = "<input type='radio'  name='branches' value='restrepo'><img src='img/Options/branches/restrepo.png' id='branchImg'>";
-var soacha = "<input type='radio'  name='branches' value='soacha'><img src='img/Options/branches/soacha.png' id='branchImg'>";
-var suba = "<input type='radio'  name='branches' value='suba'><img src='img/Options/branches/suba.png' id='branchImg'>";
-var uniocci = "<input type='radio'  name='branches' value='uniocci'><img src='img/Options/branches/uniocci.png' id='branchImg'>";
+var branchCarouselB = "<div id='branchesCarousel' class='carousel slide' data-ride='carousel'><ol class='carousel-indicators'><li data-target='#branchesCarousel' data-slide-to='0' class='active'></li><li data-target='#branchesCarousel' data-slide-to='1'></li><li data-target='#branchesCarousel' data-slide-to='2'></li><li data-target='#branchesCarousel' data-slide-to='3'></li></ol><div class='carousel-inner'><div class='item active' id='slideBranch1'><a href='branches/branchAd.html'><div id='administrativa' class='thumbnail'></div></a><a href='branches/branchCI.html'><div id='centrointer' class='thumbnail'></div></a><a href='branches/branchCed.html'><div id='cedritos' class='thumbnail'></div></a><a href='branches/branchCM.html'><div id='centromayor' class='thumbnail'></div></a></div><div class='item' id='slideBranch1'><a href='branches/branchCha.html'><div id='chapinero' class='thumbnail'></div></a><a href='branches/branchChi.html'><div id='chia' class='thumbnail'></div></a><a href='branches/branchMa.html'><div id='madelena' class='thumbnail'></div></a><a href='branches/branchMo.html'><div id='modelia' class='thumbnail'></div></a></div><div class='item' id='slideBranch1'><a href='branches/branchMu.html'><div id='multiplaza' class='thumbnail'></div></a><a href='branches/branchPA.html'><div id='plazamerica' class='thumbnail'></div></a><a href='branches/branchPC.html'><div id='plazacentral' class='thumbnail'></div></a><a href='branches/branchRe.html'><div id='restrepo' class='thumbnail'></div></a></div><div class='item' id='slideBranch2'><a href='branches/branchSo.html'><div id='soacha' class='thumbnail'></div></a><a href='branches/branchSu.html'><div id='suba' class='thumbnail'></div></a><a href='branches/branchUO.html'><div id='uniocci' class='thumbnail'></div></a></div></div><a class='left carousel-control' href='#branchesCarousel' data-slide='prev'><span class='glyphicon glyphicon-chevron-left'></span><span class='sr-only'>Previous</span></a><a class='right carousel-control' href=#branchesCarousel' data-slide='next'><span class='glyphicon glyphicon-chevron-right'></span><span class='sr-only'>Next</span></a></div>";
 
 function displayCundinamarca(){
-    document.getElementById("branchC").innerHTML = administrativa + centrointer + cedritos + centromayor + 
-    chapinero + chia + madelena + modelia + multiplaza + plazamerica + plazacentral + restrepo + soacha + suba + uniocci;
+    document.getElementById('branches').innerHTML = branchCarouselB;
 }

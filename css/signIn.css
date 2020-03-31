@@ -80,6 +80,7 @@ body{
 /* 7. CONTAINER-FLUID "CONTENT" */
 #content{
     max-width: 30%;
+    margin-left: 35%;
     background: transparent;
     text-align: center;
     display: block;
