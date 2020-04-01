@@ -12,9 +12,10 @@ include_once 'include/users.php';
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/backChange.css">
-    <link rel="stylesheet" type="text/css" href="css/wizard.css">
-    <script type="text/javascript" src="js/bable.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/signUp.css">
+    <script type="text/javascript" src="js/backChange.js"></script>
+    <script type="text/javascript" src="js/wizard.js"></script>
+
     <title>Bable | Crear cuenta</title>
 </head>
 
@@ -28,7 +29,7 @@ include_once 'include/users.php';
                     </div>
                 </div>
                 <div class="col-md-10" id="reg">
-                    <a href="signIn.php" role="button" id="login"><b>Iniciar sesion</b></a>
+                    <a href="index.php" role="button" id="login"><b>Iniciar sesion</b></a>
                 </div>
             </div>
         </div>
