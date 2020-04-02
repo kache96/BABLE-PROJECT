@@ -1,4 +1,5 @@
 <?php
+
     $users = new Users();
     if(isset($_POST['btnSignUp'])){
         $users->setNamec($_POST['namec']);
@@ -14,4 +15,5 @@
         $users->setSanswer2($_POST['sanswer2']);
         $users->signUp();
     }
+
  ?>

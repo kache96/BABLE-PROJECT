@@ -1,247 +1,150 @@
 @font-face {
     font-family: Antonio;
     src: url(../fonts/Antonio-Bold.ttf);
-}
-* {
+  }
+  * {
     margin: 0;
     padding: 0;
     font: 18px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-}
-/* 1. BACKGROUND */
-body{
-    background-color: white;
-}
-/* 2. CONTAINER-FLUID PAGE */
-.container-fluid{
+  }
+  /* 1. BACKGROUND */
+  body {
+    background-image: url();
+    height: 1200px;
+    background-size: cover;
+  }
+  /* 2. CONTAINER-FLUID PAGE */
+  .container-fluid {
     padding: 0;
     margin: 0;
-}
-/* 3. NAVBAR */
-/* 3.1 Nav bar */
-.navbar-default{
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 1%;
+  }
+  /* 3. NAVBAR */
+  /* 3.1 Nav bar */
+  nav {
+    background-color: rgba(255, 255, 255, 0.904);
+  }
+  .navbar-brand {
+    width: 50px;
+    height: 40px;
     margin: 0;
-}
-/* 3.2 Navbar left elements*/
-.navbar-left{
-    height: 60px;
-    padding-top: 5px;
-}
-/* 3.2 Navbar logo space */
-.navbar-brand{
-    width: 60px;
-    margin: 0;
-}
-/* 3.3 Navbar logo */
-a.navbar-brand{
-    background-position: center;   
-    background-size: 100%; 
-    background-repeat: no-repeat;  
+  }
+  a.navbar-brand {
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     background-image: url(../img/Logos/logor.png);
-}
-/* 3.3 Navbar "welcome" text */
-.navbar-nav.navbar-center{
-    position: absolute;
-    left: 75%;
-    padding-top: 19px;
-}
-#welcome{
-    color: rgb(155, 0, 0);
-    width: 100%;
-
-}
-.dropdown-menu>li>a>{
-    text-align: center;
-    padding-top: 20px;
-}
-.dropdown-menu>li>a:hover{
-    color: #9b0000;
-}
-.dropdown-menu>li>a:focus{
-    border-bottom: solid rgb(155, 0, 0) 1px;
-
-}
-.navbar-nav>li>.dropdown-menu {
+  }
+  .dropdown-menu {
     border: 0;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
     box-shadow: none;
-    border-radius: 0;
-    border-right: solid rgb(155, 0, 0) 1px;
-}
-.material-icons{
+    border-radius: 1;
+    padding-top: 0;
+    margin-right: 30px;
+    text-align: right;
+  }
+  .dropdown-item {
+    background-color: transparent;
+    padding: 5px;
+    border-bottom: 3px solid transparent;
+  }
+  .dropdown-item:hover {
+    background-color: transparent;
+    border-bottom: 3px solid rgb(155, 0, 0);
+  }
+  .material-icons {
     font-size: 45px;
     margin-top: 5px;
     margin-right: 15px;
     margin-left: 15px;
     color: rgb(155, 0, 0);
-}
-
-.material-icons:hover{
+  }
+  .material-icons:hover {
     color: rgb(80, 0, 0);
-}
-#userIcon{
+  }
+  #userIcon {
     padding: 0;
-
-}
-#configIcon{
-    font-size: 19px;
-    padding-right: 3px;
+  }
+  #configIcon {
+    font-size: 25px;
+    padding-right: 10px;
+    padding-top: 1px;
     margin: 0;
     float: left;
     color: rgb(0, 0, 0);
+  }
+  #info {
+    color: #9b0000;
+  }
+  #content {
+    margin-top: 5%;
+  }
+  #carouselSmartNews{
+    margin-top: 0;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/Backgrounds/whiteFigures.png);
 }
-#info{
+  .carousel-inner img {
+    width: 90%;
+    height: 100%;
+    border-radius: 0px 20px 0px 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.26);
+
+}
+  .carousel {
+    width: 100%;
+    height: 35%;
+    margin-left: 5%;
+}
+.carousel-control-next{
+    right: 10%
+}
+#slideArrow{
+    color: rgb(83, 83, 83);
+    font-size: 50px;
+}
+.carousel-caption{
+    left: 50%;
+    bottom: 60%;
+    right: 0%;
     color: #9b0000;
 }
-#book{
-    width: 100%;
+#QA{
+    margin-top: 2%;
+    margin-left: 6%;
+
 }
-#content{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    padding-top: 1%;
-    padding-bottom: 5%;
-    background-color: transparent;
-    background-size: 100%;
+#leftRow{
+
 }
-/* 8. REGISTRATION WIZARD */
-/* 8.1 Wizard  */
-.wizard-inner{
-    margin-left: 2%;
-    margin-right: 2%;
+#textQA{
+    width: 78%;
+    height: 300px;
     text-align: center;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(../img/Backgrounds/quest.png);
+    border-radius: 0px 20px 0px 20px;
+    border: 1px solid whitesmoke;
+    color: #9b0000;
+    line-height: 300px;
+    font-family: Antonio;
+    font-size: 30px;
 }
-/* 8.2 Wizard icons bar */
-.nav-tabs {
-    border: none;
-    padding-top: 3%;
-    padding-bottom: 3%;
+#textQA:hover{
+    background-image: url(../img/Backgrounds/quest2.png);
+    color: white;
 }
-/* 8.3 Wizard icons size */
-#steps{
-    width: 70px;
-    box-shadow: 0px 0px 10px rgb(151, 151, 151);
-    border-radius: 100%;
-    border: 1px transparent;
+#infoIcon{
+    width: 10%;
+    float: left;
+    margin-right: 2%;
 }
-
-
-/* 8.4 Wizard space between icons */
-.wizard .nav-tabs > li{
-    margin-left: 9%;
-    width: 13%;
-}
-.nav>li:hover{
-    position: relative;
-    animation: stepEffect 4s infinite;
-
-}
-    @keyframes stepEffect {
-        0%   {top:0px;}
-        25%  {top:50px;}
-        50%  {top:0px;}
-        75%  {top:50px;}
-        100% {top:0px;}
-      }
-/* 8.5 Wizard icons borderline */
-.wizard .nav-tabs > li a{
-    box-sizing: 1100px;
-    border: none;
-    width: 100%;
-}
-/* 8.6 Wizard icons hover */
-.nav>li>a:hover{
-    border: none;
-    background-color: transparent;
-    color: rgb(15, 15, 15);
-}
-/* 8.7 Wizard active icon color */
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-    color: rgb(15, 15, 15);
-    background-color: transparent;
-    border: none;
-
-}
-/* 8.8 Wizard disable icon color */
-.nav>li.disabled>a{
-    color: transparent;
-}
-/* 8.9 Wizard disable icon hover */
-.nav>li.disabled>a:hover, .nav>li.disabled>a:focus{
-    color: rgb(15, 15, 15);
+#textReminds{
+    line-height: 90px;
 }
 form{
-    margin-left: 15%;
-    margin-right: 18%;
-}
-#branches{
-    text-align: center;
-}
-#btnbranch{
-    color: rgb(0, 0, 0);
-    background-image: url(../img/Options/branches/bubles.png);
-    background-size: 100% ;
-    background-repeat: no-repeat;
-    padding-top: 9px;
-    border-radius: 2.5px;
-    border: 1px solid #9b0000;
-    width: 100%;
-}
-#btnword{
-    font-family: Antonio;
-    font-size: 40px;
-    letter-spacing: 0.1em;
-}
-/* 10.1 Buttons hover */
-#btnbranch:hover{
-    color: #9b0000;
-}
-/* 10.2 Buttons focus */
-#btnbranch:focus{
-    color: rgb(155, 0, 0);
-    border: solid rgb(155, 0, 0) 1px;
-}
-#branchC{
-    margin-bottom: 20%;
-}
-#branchImg{
-    width: 41%;
-    margin-right: 5%;
-    padding-top: 5%;
-    padding-left: 3%;
-    border: 1px transparent;
-    transition: transform 4s, box-shadow, padding;
-}
-#branchImg:hover{
-    transform: scale(1.5);
-    box-shadow: 0px 0px 10px rgb(151, 151, 151);
-    padding: 0;
-}
-#langImg{
-    width: 20%;
-    margin-right: 3%;
-    padding-top: 5%;
-    padding-left: 3%;
-    border-radius: 30%;
-    border: 1px transparent;
-    transition: padding;
-}
-#langImg:hover{
-    padding: 0;
-}
-.next-step, .prev-step{
-    color: rgb(0, 0, 0);
-    background-color: rgb(247, 247, 247);
-    padding: 10px;
-    border-radius: 2.5px;
-    border: none;
-    width: 100%;
-}
-.next-step:hover, .prev-step:hover{
-    color: rgb(255, 255, 255);
-    background-color: rgb(155, 0, 0);
+    padding: 2%;
 }
