@@ -1,0 +1,108 @@
+<?php 
+include_once 'include/branchN.php';
+include_once 'include/user.php';
+include_once 'include/userSession.php';
+
+$userSession = new UserSession();
+$user = new User();
+
+if(isset($_SESSION['user'])){
+    $user->setUser($userSession->getCurrentUser());
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/branch.css">
+    <script type="text/javascript" src="js/options.js"></script>
+    <title>Bable | Branch</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a class="navbar-brand"></a></li>
+                    <li><a href="index.php" id="info"><b>Home</b></a></li>
+                    <li><a href="branch.php" id="info"><b>Reservar</b></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
+                    <div id="welcome"><b>Bienvenido <?php echo $user->getUser(); ?></b></div>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" id="userIcon" data-toggle="dropdown">
+                            <span>
+                                <i class="material-icons">account_circle</i>
+                            </span>
+                            <ul class="dropdown-menu">
+                                <li><a href="account.php"><i class="material-icons" id="configIcon">settings</i>Configuracion</a>
+                                </li>
+                                <li>
+                                    <a href="include/signOut.php" role="button"><i class="material-icons"
+                                            id="configIcon">settings_power</i><b>Cerrar sesion</b></a>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <img src="img/Backgrounds/banners/banner1.png" id="book">
+    </div>
+    <div class="container-fluid" id="page">
+        <div class="container-fluid" id="content">
+            <div id="selectBranch">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="subtitle">Sedes</h1>
+                        <hr>
+                        <p>Seleccione el departamento en el que reside y a continuacion, escoja la sede en la que desea reservar su cupo.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" id="btnbranch" onclick="displayAntioquia()">
+                            <p id="btnword">ANTIOQUIA</p>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" id="btnbranch" onclick="displayCundinamarca()">
+                            <p id="btnword">CUNDINAMARCA</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="" method="post">
+        <?php include_once 'include/eventsBranch.php';?>
+            <div class="container-fluid" id="content">
+                <div id="branches"></div>               
+            </div>
+        </form>
+        <div class="container-fluid">
+            <img src="img/Backgrounds/banners/banner2.png" id="book">
+        </div>
+</body>
+
+</html>

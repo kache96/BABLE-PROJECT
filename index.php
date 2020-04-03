@@ -9,7 +9,7 @@ $user = new User();
 if(isset($_SESSION['user'])){
     $user->setUser($userSession->getCurrentUser());
 
-    include_once 'home.php';
+    include_once 'branch.php';
 }else if(isset($_POST['username']) && isset($_POST['pass'])){
     $userSignIn = $_POST['username'];
     $passSignIn = $_POST['pass'];

@@ -18,4 +18,5 @@ class UserSession{
         session_destroy();
     }
 }
+
 ?>

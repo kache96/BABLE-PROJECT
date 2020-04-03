@@ -41,7 +41,7 @@
                     <br>
                     <button type="submit" name="btnSignIn"><b>Ingresar</b></button>
                     <br>
-                    <small><a href="passf.php" role="button">¿Has olvidado tu contraseña?</a></small>
+                    <small><a href="forgottenPass.php" role="button">¿Has olvidado tu contraseña?</a></small>
                 </div>
             </form>
         </div>
