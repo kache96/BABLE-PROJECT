@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Antonio;
+    src: url(../fonts/Antonio-Bold.ttf);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font: 18px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  }
+  /* 1. BACKGROUND */
+  body {
+    overflow-x: hidden;
+
+  }
+  /* 2. CONTAINER-FLUID PAGE */
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+  /* 3. NAVBAR */
+  /* 3.1 Nav bar */
+  nav {
+    background-color: rgba(255, 255, 255, 0.904);
+  }
+  .navbar-brand {
+    width: 50px;
+    height: 40px;
+    margin: 0;
+  }
+  a.navbar-brand {
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/Logos/logor.png);
+  }
+  .dropdown-menu {
+    border: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    border-radius: 1;
+    padding-top: 0;
+    margin-right: 30px;
+    text-align: right;
+  }
+  .dropdown-item {
+    background-color: transparent;
+    padding: 5px;
+    border-bottom: 3px solid transparent;
+  }
+  .dropdown-item:hover {
+    background-color: transparent;
+    border-bottom: 3px solid rgb(155, 0, 0);
+  }
+  .material-icons {
+    font-size: 45px;
+    margin-top: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: rgb(155, 0, 0);
+  }
+  .material-icons:hover {
+    color: rgb(80, 0, 0);
+  }
+  #userIcon {
+    padding: 0;
+  }
+  #configIcon {
+    font-size: 25px;
+    padding-right: 10px;
+    padding-top: 1px;
+    margin: 0;
+    float: left;
+    color: rgb(0, 0, 0);
+  }
+  #info {
+    color: #9b0000;
+  }
+  #content {
+    margin-top: 5%;
+    margin-left: 6%;
+  }
+  p{
+    margin-right: 10%;
+
+  }
+  #userIcon2{
+    width: 100%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 20%;
+  }
+  #formConfig{
+    width: 80%;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-bottom: 10%;
+  }
+  #namec, #lastname, #code, #email{
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid rgb(233, 233, 233);
+    margin-bottom: 4%;
+  }
+  #namec, #lastname, #code, #email:focus{
+    border: 1px solid #9b0000;
+    box-shadow: none;
+    outline: none;
+  }
+#btnUpdateU{
+    background-color:  #9b0000;
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    font-weight: bold;
+    margin-top: 3%;
+  }
+  #btnUpdateU:hover{
+    background-color:  #6b0101;
+  }
+  #passChangeLink{
+    background-color: white;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid lightseagreen;
+    color: lightseagreen;
+  }
+  #passChangeLink:hover{
+    background-color: lightseagreen;
+    color: white;
+  }
+  #btnUpdateU:focus, #passChangeLink:focus{
+    box-shadow: none;
+    outline: none;
+  }
+  #footer {
+    width: 100%;
+}

@@ -1,0 +1,97 @@
+@font-face {
+    font-family: Antonio;
+    src: url(../fonts/Antonio-Bold.ttf);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font: 18px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  }
+  /* 1. BACKGROUND */
+  body {
+    overflow-x: hidden;
+
+  }
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+#head >img{
+    width: 100%;
+    max-height: 3%;
+}
+#welcome{
+    text-align: center;
+    z-index: 100px;
+    top: -100px;
+    position: relative;
+}
+.form-control {
+    border-style: solid;
+    border-left-width: 5px;
+    margin-bottom: 3%;
+    border-radius: 20px 20px 20px 20px;
+    width: 100%;
+}
+.form-control:focus, .form-control:hover{
+    box-shadow: none;
+    border-color: #9b0000;
+    border-left-width: 8px;
+}
+#userID{
+    margin-bottom: 5%;
+}
+#step{
+    width: 100%;
+}
+#step1{
+    width: 10%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+#step1:hover{
+    width: 11%;
+}
+#btnChangeP{
+    background-color: #9b0000;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid #9b0000;
+    margin-top: 6%;
+}
+#btnChangeP:hover{
+    background-color: #ffffff;
+    color: #9b0000;    
+    border: 1px solid #9b0000;
+}
+#btnChangeP:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #9b0000;
+}
+#columnUser{
+    padding: 0;
+}
+#useridy{
+    border-right: none;
+    border-radius: 20px 0px 0px 20px;
+}
+#btnUserIdentity{
+    background-color: #9b0000;
+    border-radius: 0px 20px 20px 0px;
+    border: 1px solid #9b0000;
+    width: 10%;
+}
+#btnUserIdentity:hover{
+    background-color: #ffffff;
+    color: #9b0000;    
+    border: 1px solid #9b0000;
+}
+#btnUserIdentity:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #9b0000;
+}
+#fieldQuest{
+    border: none;
+}

@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
        
        header("location: home.php");
     }else {
-       $error = "¡Ups! El nombre de usuario o contraseña es incorrecto. Intenta con un nombre de usuario o contraseña diferente.";
+      echo'<script type="text/javascript"> alert("¡OH NO! La contraseña o usuario que has ingresado no es correcta. Intentalo de nuevo"); </script>';
     }
  }
 ?>

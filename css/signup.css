@@ -1,215 +1,221 @@
 * {
-    margin: 0;
-    padding: 0;
-    font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 /* 1. BACKGROUND BANKSY IMAGE */
-body{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 /* 2. CONTAINER-FLUID PAGE */
-.container-fluid{
-    margin: 0;
-    padding: 0;
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 /* 3. PAGE HEADER */
 /* 3.1 Container-fluid header */
-#header{
-    background: transparent;
-    width: 100%;
-    height: 50%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-    padding-right: 3%;
+#header {
+  background: transparent;
+  width: 100%;
+  height: 50%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 /* 3.2 Header logo */
-#logo{
-    height: 40px;
-    background-size: 50px; 
-    background-repeat: no-repeat;  
-    background-image: url(../img/Logos/logow.png);
+#logo {
+  height: 40px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-image: url(../img/Logos/logow.png);
 }
 /* 3.3 Header logo hover */
-#logo:hover{
-    background-image: url(../img/Logos/logor.png);
+#logo:hover {
+  background-image: url(../img/Logos/logor.png);
 }
 /* 4. DIV "SIGN IN" BUTTON */
-#reg{
-    padding-top: 1%;
-    height: 40px;
-    text-align: right;
+#reg {
+  padding-top: 1%;
+  height: 40px;
+  text-align: right;
 }
 /* 5. "SIGN IN" BUTTON */
-#login{
-    color: #939192;
-    background: #FEFDFD;
-    padding: 9px;
-    border-radius: 2px;
-    width: 130px;
+#login {
+  color: #939192;
+  background: #fefdfd;
+  padding: 9px;
+  border-radius: 2px;
+  width: 130px;
 }
 /* 5. "Sign in" button hover */
-#login:hover{
-    color: rgb(155, 0, 0);
+#login:hover {
+  color: rgb(155, 0, 0);
 }
 /* 6. BABLE NAME IMAGE*/
-#title{
-    height: 150px;
-    background-size: 300px; 
-    background-position: center;    
-    background-repeat: no-repeat; 
-    background-image: url(../img/Logos/titlewh.png);
+#title {
+  height: 150px;
+  background-size: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/Logos/titlewh.png);
 }
 /* 6.1 Bable name image hover */
-#title:hover{
-    background-image: url(../img/Logos/titlerh.png);
+#title:hover {
+  background-image: url(../img/Logos/titlerh.png);
 }
 /* 7. TEXT "CREATE ACCOUNT" */
-#titlep{
-    text-align: center;
-    color: white;
+#titlep {
+  text-align: center;
+  color: white;
 }
 /* 7. CONTAINER-FLUID "CONTENT"*/
-#content{
-    margin-left: 15%;
-    margin-right: 15%;
+#content {
+  margin-left: 15%;
+  margin-right: 15%;
 }
 /* 8. REGISTRATION WIZARD */
 /* 8.1 Wizard  */
-.wizard-inner{
-    margin-left: 15%;
-    margin-right: 15%;
+.wizard-inner {
+  margin-left: 15%;
+  margin-right: 15%;
 }
 /* 8.2 Wizard icons bar */
 .nav-tabs {
-    border-bottom: none;
-    padding-top: 10%;
-    padding-bottom: 5%;
+  border-bottom: none;
+  padding-top: 10%;
+  padding-bottom: 5%;
 }
 /* 8.3 Wizard icons size */
-.material-icons{
-    font-size: 50px;
+.material-icons {
+  font-size: 50px;
 }
 /* 8.4 Wizard space between icons */
-.wizard .nav-tabs > li{
-    margin-left: 11%;
+.wizard .nav-tabs > li {
+  margin-left: 11%;
 }
 /* 8.5 Wizard icons borderline */
-.wizard .nav-tabs > li a{
-    width: 100%;
-    padding: 10px;
-    border-top: solid rgb(155, 0, 0) 4px;
+.wizard .nav-tabs > li a {
+  width: 100%;
+  padding: 10px;
+  border-top: solid rgb(155, 0, 0) 4px;
 }
 /* 8.6 Wizard icons hover */
-.nav>li>a:hover{
-    border-left: none;
-    border-right: none;
-    border-top: solid rgba(155, 0, 0, 0.568) 7px;
-    border-bottom: none;
-    background-color: transparent;
-    color: rgba(155, 0, 0, 0.568);
+.nav > li > a:hover {
+  border-left: none;
+  border-right: none;
+  border-top: solid rgba(155, 0, 0, 0.568) 7px;
+  border-bottom: none;
+  background-color: transparent;
+  color: rgba(155, 0, 0, 0.568);
 }
 /* 8.7 Wizard active icon color */
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-    color: rgb(155, 0, 0);
-    background-color: transparent;
-    border-left: none;
-    border-right: none;
-    border-top: solid rgb(155, 0, 0) 7px;
-    border-bottom: none;
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: rgb(155, 0, 0);
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: solid rgb(155, 0, 0) 7px;
+  border-bottom: none;
 }
 /* 8.8 Wizard disable icon color */
-.nav>li.disabled>a{
-    color: rgb(255, 255, 255);
+.nav > li.disabled > a {
+  color: rgb(255, 255, 255);
 }
 /* 8.9 Wizard disable icon hover */
-.nav>li.disabled>a:hover, .nav>li.disabled>a:focus{
-    color: rgba(155, 0, 0, 0.568);
+.nav > li.disabled > a:hover,
+.nav > li.disabled > a:focus {
+  color: rgba(155, 0, 0, 0.568);
 }
 /* 9. FORM */
 /* 9.1 Form group spaces */
-.form-group{
-    margin-bottom: 6px;
-    padding-left: 3px;
-    padding-right: 3px;
+.form-group {
+  margin-bottom: 6px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 /* 9.2 Input text, password, email */
-input[type="text"], input[type="password"], input[type="email"] {
-    border-style: none;
-    border-radius: 0;
-    padding: 4%;
-    background: #FEFDFD;
-    width: 100%;
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  border-style: none;
+  border-radius: 0;
+  padding: 4%;
+  background: #fefdfd;
+  width: 100%;
 }
 /* 9.3 Text "p" color */
-#info{
-    color: white;
+#info {
+  color: white;
 }
 /* 9.4 Input text nameUser */
-#nameUser{
-    min-height: 10px;
-    padding-left: 14px;
+#nameUser {
+  min-height: 10px;
+  padding-left: 14px;
 }
 /* 9.5 Questions text "p" */
-#questinfo{
-    text-align: justify;
-    color: white;
+#questinfo {
+  text-align: justify;
+  color: white;
 }
 /* 9.6 Questions selects */
-select{
-    border-style: none;
-    border-radius: 0;
-    padding: 4%;
-    background: #FEFDFD;
-    width: 100%;
+select {
+  border-style: none;
+  border-radius: 0;
+  padding: 4%;
+  background: #fefdfd;
+  width: 100%;
 }
 /* 9.7 Input "ranswer" answer2 */
-#ranswer{
-    margin-bottom: 20px;
+#ranswer {
+  margin-bottom: 20px;
 }
 /* 9.8 Input, button and select focus */
-input:focus, select:focus{
-    outline: none;
+input:focus,
+select:focus {
+  outline: none;
 }
 /* 9.9 Buttons */
-button{
-    color: rgb(70, 70, 70);
-    background-image: url(../img/Gifs/figures.gif);
-    background-size: 100% ;
-    padding: 9px;
-    border-radius: 2.5px;
-    border-style: none;
-    margin-top: 15px;
-    width: 100%;
+button {
+  color: rgb(70, 70, 70);
+  background-image: url(../img/Gifs/figures.gif);
+  background-size: 100%;
+  padding: 9px;
+  border-radius: 2.5px;
+  border-style: none;
+  margin-top: 15px;
+  width: 100%;
 }
 /* 9.9.1 Buttons hover */
-button:hover{
-    color: rgb(155, 0, 0);
+button:hover {
+  color: rgb(155, 0, 0);
 }
 /* 9.9.2 Buttons focus */
-button:focus{
-    color: rgb(155, 0, 0);
-    border: solid rgb(155, 0, 0) 1px;
-    outline: none;
+button:focus {
+  color: rgb(155, 0, 0);
+  border: solid rgb(155, 0, 0) 1px;
+  outline: none;
 }
 /* 10. LINKS */
 /* 10.1 Text link color */
-a{
-    color: white;
+a {
+  color: white;
 }
 /* 10.2 Text link hover */
-a:hover{
-    text-decoration: none;
-    color: rgb(155, 0, 0);
+a:hover {
+  text-decoration: none;
+  color: rgb(155, 0, 0);
 }
 /* 11. ALERT PHP MESSAGE */
-#alert{
-    background-color: #00000057;
-    color: rgb(255, 255, 255);
-    border: solid rgba(0, 0, 0, 0.089) 3px;
-    width: 100%;
-    text-align:center;
-    padding: 20px;
+#alert {
+  background-color: #00000057;
+  color: rgb(255, 255, 255);
+  border: solid rgba(0, 0, 0, 0.089) 3px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
 }

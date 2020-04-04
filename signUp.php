@@ -12,9 +12,10 @@ include_once 'include/users.php';
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/backChange.css">
-    <link rel="stylesheet" type="text/css" href="css/wizard.css">
-    <script type="text/javascript" src="js/bable.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/signUp.css">
+    <script type="text/javascript" src="js/backChange.js"></script>
+    <script type="text/javascript" src="js/wizard.js"></script>
+
     <title>Bable | Crear cuenta</title>
 </head>
 
@@ -28,7 +29,7 @@ include_once 'include/users.php';
                     </div>
                 </div>
                 <div class="col-md-10" id="reg">
-                    <a href="signIn.php" role="button" id="login"><b>Iniciar sesion</b></a>
+                    <a href="index.php" role="button" id="login"><b>Iniciar sesion</b></a>
                 </div>
             </div>
         </div>
@@ -155,34 +156,34 @@ include_once 'include/users.php';
                             <div class="form-group col-md-6">
                                 <select name="squest1">
                                     <option selected id="selected">1. Seleccione la pregunta</option>
-                                    <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
-                                    <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
-                                    <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?
+                                    <option value="¿En que ciudad se conocieron tus padres?">¿En que ciudad se conocieron tus padres?</option>
+                                    <option value="¿Cual seria tu trabajo ideal?">¿Cual seria tu trabajo ideal?</ption>
+                                    <option value="¿Cual era el nombre de pila de tu mejor amigo?">¿Cual era el nombre de pila de tu mejor amigo?
                                     </option>
-                                    <option value="quest4">¿Cual es tu lugar favorito?</option>
-                                    <option value="quest5">¿Cual era la marca de tu primer celular?</option>
-                                    <option value="quest6">¿Como se llamaba tu primera mascota?</option>
-                                    <option value="quest7">¿Cual era la raza de tu primera mascota?</option>
-                                    <option value="quest8">¿Que fue lo primero que aprendiste a cocinar?
+                                    <option value="¿Cual es tu lugar favorito?">¿Cual es tu lugar favorito?</option>
+                                    <option value="¿Cual era la marca de tu primer celular?">¿Cual era la marca de tu primer celular?</option>
+                                    <option value="¿Como se llamaba tu primera mascota?">¿Como se llamaba tu primera mascota?</option>
+                                    <option value="¿Cual era la raza de tu primera mascota?">¿Cual era la raza de tu primera mascota?</option>
+                                    <option value="¿Que fue lo primero que aprendiste a cocinar?">¿Que fue lo primero que aprendiste a cocinar?
                                     </option>
-                                    <option value="quest9">¿Cual era tu cantante o grupo preferido en el instituto?
+                                    <option value="¿Cual era tu cantante o grupo preferido en el instituto?">¿Cual era tu cantante o grupo preferido en el instituto?
                                     </option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <select name="squest2">
                                     <option selected>2. Seleccione la pregunta</option>
-                                    <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
-                                    <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
-                                    <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?
+                                    <option value="¿En que ciudad se conocieron tus padres?">¿En que ciudad se conocieron tus padres?</option>
+                                    <option value="¿Cual seria tu trabajo ideal?">¿Cual seria tu trabajo ideal?</ption>
+                                    <option value="¿Cual era el nombre de pila de tu mejor amigo?">¿Cual era el nombre de pila de tu mejor amigo?
                                     </option>
-                                    <option value="quest4">¿Cual es tu lugar favorito?</option>
-                                    <option value="quest5">¿Cual era la marca de tu primer celular?</option>
-                                    <option value="quest6">¿Como se llamaba tu primera mascota?</option>
-                                    <option value="quest7">¿Cual era la raza de tu primera mascota?</option>
-                                    <option value="quest8">¿Que fue lo primero que aprendiste a cocinar?
+                                    <option value="¿Cual es tu lugar favorito?">¿Cual es tu lugar favorito?</option>
+                                    <option value="¿Cual era la marca de tu primer celular?">¿Cual era la marca de tu primer celular?</option>
+                                    <option value="¿Como se llamaba tu primera mascota?">¿Como se llamaba tu primera mascota?</option>
+                                    <option value="¿Cual era la raza de tu primera mascota?">¿Cual era la raza de tu primera mascota?</option>
+                                    <option value="¿Que fue lo primero que aprendiste a cocinar?">¿Que fue lo primero que aprendiste a cocinar?
                                     </option>
-                                    <option value="quest9">¿Cual era tu cantante o grupo preferido en el instituto?
+                                    <option value="¿Cual era tu cantante o grupo preferido en el instituto?">¿Cual era tu cantante o grupo preferido en el instituto?
                                     </option>
                                 </select>
                             </div>
