@@ -1,0 +1,355 @@
+@font-face {
+  font-family: Antonio;
+  src: url(../fonts/Antonio-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: 18px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+}
+/* 1. BACKGROUND */
+body {
+  background-color: white;
+}
+/* 3. NAVBAR */
+/* 3.1 Nav bar */
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.685);
+  border: none;
+  border-radius: 0;
+  padding: 1%;
+  padding-right: 3%;
+  margin: 0;
+}
+/* 3.2 Navbar left elements*/
+.navbar-left {
+  height: 60px;
+  padding-top: 5px;
+}
+/* 3.2 Navbar logo space */
+.navbar-brand {
+  width: 60px;
+  margin: 0;
+}
+/* 3.3 Navbar logo */
+a.navbar-brand {
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../img/Logos/logor.png);
+}
+/* 3.3 Navbar "welcome" text */
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 75%;
+  padding-top: 19px;
+}
+#welcome {
+  color: rgb(155, 0, 0);
+  width: 100%;
+}
+.dropdown-menu > li > a {
+  text-align: right;
+  border-bottom: solid transparent 2px;
+  width: 190px;
+
+
+}
+.dropdown-menu > li > a:hover {
+  border-bottom: solid rgb(155, 0, 0) 2px;
+  background-color: transparent;
+}
+.dropdown-menu > li > a:focus {
+  border-bottom: solid rgb(155, 0, 0) 2px;
+}
+.navbar-nav > li > .dropdown-menu {
+  border: 0;
+  padding: 20%;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 5px;
+}
+.material-icons {
+  font-size: 45px;
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: rgb(155, 0, 0);
+}
+.material-icons:hover {
+  color: rgb(80, 0, 0);
+}
+#userIcon {
+  padding: 0;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  background-color: transparent;
+}
+#configIcon {
+  font-size: 19px;
+  padding-right: 10%;
+  margin: 0;
+  float: left;
+  color: rgb(0, 0, 0);
+}
+#info {
+  color: #9b0000;
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+#book {
+  width: 100%;
+}
+#content {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  background-color: transparent;
+  background-size: 100%;
+}
+#selectBranch {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+#btnbranch {
+  color: #9b0000;
+  background-color: transparent;
+  padding-top: 9px;
+  border-radius: 40px 40px 40px 40px;
+  border: 2px #9b0000 solid;
+  width: 100%;
+}
+#btnword {
+  font-family: Antonio;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+}
+/* 10.1 Buttons hover */
+#btnbranch:hover {
+  color: white;
+  background-color: #9b0000;
+}
+/* 10.2 Buttons focus */
+#btnbranch:focus {
+  color: rgb(155, 0, 0);
+  border: solid rgb(155, 0, 0) 1px;
+}
+#branchC {
+  margin-bottom: 20%;
+}
+#branchImg {
+  width: 41%;
+  margin-right: 5%;
+  padding-top: 5%;
+  padding-left: 3%;
+  border: 1px transparent;
+  transition: transform 4s, box-shadow, padding;
+}
+#branchImg:hover {
+  transform: scale(1.5);
+  box-shadow: 0px 0px 10px rgb(151, 151, 151);
+  padding: 0;
+}
+button:focus{
+  outline: none;
+  box-shadow: none;
+}
+button[type="submit"] {
+  border: none;
+  background-color: transparent;
+  height: 70%;
+  width: 250px;
+  margin: 1%;
+
+}
+.carousel-control {
+  color: black;
+  text-shadow: none;
+  opacity: unset;
+  background-image: none !important;
+  top: 103%;
+}
+.carousel-control.left {
+  left: 37%;
+}
+.carousel-control.right {
+  right: 37%;
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  color: rgb(155, 0, 0);
+}
+.carousel-indicators {
+  top: 109%;
+}
+.carousel-indicators > li {
+  background-color: rgb(155, 0, 0);
+}
+.carousel-indicators .active {
+  background-color: rgb(155, 0, 0);
+}
+#slideBranch1 {
+  margin-left: 9.5%;
+  margin-right: 0%;
+}
+#slideBranch2 {
+  margin-left: 20%;
+  margin-right: 0%;
+}
+.thumbnail {
+  border: 1px rgb(211, 211, 211) solid;
+  height: 60vh;
+  width: 250px;
+  margin: 1%;
+  float: left;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: transform 2s, box-shadow;
+  margin-top: 2.8%;
+  margin-bottom: 2.8%;
+  color: transparent;
+}
+.thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgb(151, 151, 151);
+}
+.thumbnail:focus {
+  border-color: rgb(155, 0, 0);
+}
+#arkadia {
+  background-image: url(../img/Options/branches/arkadia.png);
+}
+#arkadia:hover {
+  background-image: url(../img/Options/branches/arkadiah.png);
+}
+#bello {
+  background-image: url(../img/Options/branches/bello.png);
+}
+#bello:hover {
+  background-image: url(../img/Options/branches/belloh.png);
+}
+#calasanz {
+  background-image: url(../img/Options/branches/calasanz.png);
+}
+#calasanz:hover {
+  background-image: url(../img/Options/branches/calasanzh.png);
+}
+#centro {
+  background-image: url(../img/Options/branches/centro.png);
+}
+#centro:hover {
+  background-image: url(../img/Options/branches/centroh.png);
+}
+#olaya {
+  background-image: url(../img/Options/branches/olaya.png);
+}
+#olaya:hover {
+  background-image: url(../img/Options/branches/olayah.png);
+}
+#poblado {
+  background-image: url(../img/Options/branches/poblado.png);
+}
+#poblado:hover {
+  background-image: url(../img/Options/branches/pobladoh.png);
+}
+#itagui {
+  background-image: url(../img/Options/branches/itagui.png);
+}
+#itagui:hover {
+  background-image: url(../img/Options/branches/itaguih.png);
+}
+#administrativa {
+  background-image: url(../img/Options/branches/administrativa.png);
+}
+#administrativa:hover {
+  background-image: url(../img/Options/branches/administrativah.png);
+}
+#centrointer {
+  background-image: url(../img/Options/branches/centrointer.png);
+}
+#centrointer:hover {
+  background-image: url(../img/Options/branches/centrointerh.png);
+}
+#cedritos {
+  background-image: url(../img/Options/branches/cedritos.png);
+}
+#cedritos:hover {
+  background-image: url(../img/Options/branches/cedritosh.png);
+}
+#centromayor {
+  background-image: url(../img/Options/branches/centromayor.png);
+}
+#centromayor:hover {
+  background-image: url(../img/Options/branches/centromayorh.png);
+}
+#chapinero {
+  background-image: url(../img/Options/branches/chapinero.png);
+}
+#chapinero:hover {
+  background-image: url(../img/Options/branches/chapineroh.png);
+}
+#chia {
+  background-image: url(../img/Options/branches/chia.png);
+}
+#chia:hover {
+  background-image: url(../img/Options/branches/chiah.png);
+}
+#madelena {
+  background-image: url(../img/Options/branches/madelena.png);
+}
+#madelena:hover {
+  background-image: url(../img/Options/branches/madelenah.png);
+}
+#modelia {
+  background-image: url(../img/Options/branches/modelia.png);
+}
+#modelia:hover {
+  background-image: url(../img/Options/branches/modeliah.png);
+}
+#multiplaza {
+  background-image: url(../img/Options/branches/multiplaza.png);
+}
+#multiplaza:hover {
+  background-image: url(../img/Options/branches/multiplazah.png);
+}
+#plazamerica {
+  background-image: url(../img/Options/branches/plazamerica.png);
+}
+#plazamerica:hover {
+  background-image: url(../img/Options/branches/plazamericah.png);
+}
+#plazacentral {
+  background-image: url(../img/Options/branches/plazacentral.png);
+}
+#plazacentral:hover {
+  background-image: url(../img/Options/branches/plazacentralh.png);
+}
+#restrepo {
+  background-image: url(../img/Options/branches/restrepo.png);
+}
+#restrepo:hover {
+  background-image: url(../img/Options/branches/restrepoh.png);
+}
+#soacha {
+  background-image: url(../img/Options/branches/soacha.png);
+}
+#soacha:hover {
+  background-image: url(../img/Options/branches/soachah.png);
+}
+#suba {
+  background-image: url(../img/Options/branches/suba.png);
+}
+#suba:hover {
+  background-image: url(../img/Options/branches/subah.png);
+}
+#uniocci {
+  background-image: url(../img/Options/branches/uniocci.png);
+}
+#uniocci:hover {
+  background-image: url(../img/Options/branches/unioccih.png);
+}

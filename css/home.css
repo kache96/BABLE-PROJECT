@@ -1,247 +1,374 @@
 @font-face {
     font-family: Antonio;
     src: url(../fonts/Antonio-Bold.ttf);
-}
-* {
+  }
+  * {
     margin: 0;
     padding: 0;
     font: 18px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-}
-/* 1. BACKGROUND */
-body{
-    background-color: white;
-}
-/* 2. CONTAINER-FLUID PAGE */
-.container-fluid{
-    padding: 0;
+  }
+  /* 1. BACKGROUND */
+  body {
+    overflow-x: hidden;
+
+  }
+  /* 2. CONTAINER-FLUID PAGE */
+
+  /* 3. NAVBAR */
+  /* 3.1 Nav bar */
+  nav {
+    background-color: rgba(255, 255, 255, 0.904);
+  }
+  .navbar-brand {
+    width: 50px;
+    height: 40px;
     margin: 0;
-}
-/* 3. NAVBAR */
-/* 3.1 Nav bar */
-.navbar-default{
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 1%;
-    margin: 0;
-}
-/* 3.2 Navbar left elements*/
-.navbar-left{
-    height: 60px;
-    padding-top: 5px;
-}
-/* 3.2 Navbar logo space */
-.navbar-brand{
-    width: 60px;
-    margin: 0;
-}
-/* 3.3 Navbar logo */
-a.navbar-brand{
-    background-position: center;   
-    background-size: 100%; 
-    background-repeat: no-repeat;  
+  }
+  a.navbar-brand {
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     background-image: url(../img/Logos/logor.png);
-}
-/* 3.3 Navbar "welcome" text */
-.navbar-nav.navbar-center{
-    position: absolute;
-    left: 75%;
-    padding-top: 19px;
-}
-#welcome{
-    color: rgb(155, 0, 0);
-    width: 100%;
-
-}
-.dropdown-menu>li>a>{
-    text-align: center;
-    padding-top: 20px;
-}
-.dropdown-menu>li>a:hover{
-    color: #9b0000;
-}
-.dropdown-menu>li>a:focus{
-    border-bottom: solid rgb(155, 0, 0) 1px;
-
-}
-.navbar-nav>li>.dropdown-menu {
+  }
+  .dropdown-menu {
     border: 0;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
     box-shadow: none;
-    border-radius: 0;
-    border-right: solid rgb(155, 0, 0) 1px;
-}
-.material-icons{
+    border-radius: 1;
+    padding-top: 0;
+    margin-right: 30px;
+    text-align: right;
+  }
+  .dropdown-item {
+    background-color: transparent;
+    padding: 5px;
+    border-bottom: 3px solid transparent;
+  }
+  .dropdown-item:hover {
+    background-color: transparent;
+    border-bottom: 3px solid rgb(155, 0, 0);
+  }
+  .material-icons {
     font-size: 45px;
     margin-top: 5px;
     margin-right: 15px;
     margin-left: 15px;
     color: rgb(155, 0, 0);
-}
-
-.material-icons:hover{
+  }
+  .material-icons:hover {
     color: rgb(80, 0, 0);
-}
-#userIcon{
+  }
+  #userIcon {
     padding: 0;
-
-}
-#configIcon{
-    font-size: 19px;
-    padding-right: 3px;
+  }
+  #configIcon {
+    font-size: 25px;
+    padding-right: 10px;
+    padding-top: 1px;
     margin: 0;
     float: left;
     color: rgb(0, 0, 0);
-}
-#info{
+  }
+  #info {
     color: #9b0000;
-}
-#book{
-    width: 100%;
-}
-#content{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    padding-top: 1%;
-    padding-bottom: 5%;
-    background-color: transparent;
+  }
+  #content {
+    margin-top: 5%;
+  }
+  #carouselSmartNews{
+    margin-top: 0;
+    background-position: center;
     background-size: 100%;
-}
-/* 8. REGISTRATION WIZARD */
-/* 8.1 Wizard  */
-.wizard-inner{
-    margin-left: 2%;
-    margin-right: 2%;
-    text-align: center;
-}
-/* 8.2 Wizard icons bar */
-.nav-tabs {
-    border: none;
-    padding-top: 3%;
-    padding-bottom: 3%;
-}
-/* 8.3 Wizard icons size */
-#steps{
-    width: 70px;
-    box-shadow: 0px 0px 10px rgb(151, 151, 151);
-    border-radius: 100%;
-    border: 1px transparent;
-}
-
-
-/* 8.4 Wizard space between icons */
-.wizard .nav-tabs > li{
-    margin-left: 9%;
-    width: 13%;
-}
-.nav>li:hover{
-    position: relative;
-    animation: stepEffect 4s infinite;
-
-}
-    @keyframes stepEffect {
-        0%   {top:0px;}
-        25%  {top:50px;}
-        50%  {top:0px;}
-        75%  {top:50px;}
-        100% {top:0px;}
-      }
-/* 8.5 Wizard icons borderline */
-.wizard .nav-tabs > li a{
-    box-sizing: 1100px;
-    border: none;
-    width: 100%;
-}
-/* 8.6 Wizard icons hover */
-.nav>li>a:hover{
-    border: none;
-    background-color: transparent;
-    color: rgb(15, 15, 15);
-}
-/* 8.7 Wizard active icon color */
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-    color: rgb(15, 15, 15);
-    background-color: transparent;
-    border: none;
-
-}
-/* 8.8 Wizard disable icon color */
-.nav>li.disabled>a{
-    color: transparent;
-}
-/* 8.9 Wizard disable icon hover */
-.nav>li.disabled>a:hover, .nav>li.disabled>a:focus{
-    color: rgb(15, 15, 15);
-}
-form{
-    margin-left: 15%;
-    margin-right: 18%;
-}
-#branches{
-    text-align: center;
-}
-#btnbranch{
-    color: rgb(0, 0, 0);
-    background-image: url(../img/Options/branches/bubles.png);
-    background-size: 100% ;
     background-repeat: no-repeat;
-    padding-top: 9px;
-    border-radius: 2.5px;
-    border: 1px solid #9b0000;
+    background-image: url(../img/Backgrounds/whiteFigures.png);
+}
+  .carousel-inner img {
+    width: 90%;
+    height: 100%;
+    border-radius: 0px 20px 0px 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.26);
+
+}
+.carousel {
     width: 100%;
+    height: 70%;
+    margin-left: 5%;
 }
-#btnword{
-    font-family: Antonio;
-    font-size: 40px;
-    letter-spacing: 0.1em;
+.carousel-control-next{
+    right: 10%
 }
-/* 10.1 Buttons hover */
-#btnbranch:hover{
-    color: #9b0000;
+#slideArrow{
+    color: rgb(83, 83, 83);
+    font-size: 50px;
 }
-/* 10.2 Buttons focus */
-#btnbranch:focus{
-    color: rgb(155, 0, 0);
-    border: solid rgb(155, 0, 0) 1px;
+.carousel-caption{
+    left: 53%;
+    bottom: 16%;
+    right: 0%;
+    width: 30%;
 }
-#branchC{
-    margin-bottom: 20%;
+#captionTitle{
+  font-family: Antonio;
+  color: #9b0000;
+  letter-spacing: 5px;
+  border-bottom: 1px solid #9b0000;
 }
-#branchImg{
-    width: 41%;
-    margin-right: 5%;
-    padding-top: 5%;
-    padding-left: 3%;
-    border: 1px transparent;
-    transition: transform 4s, box-shadow, padding;
+#captionDesc{
+  color: black;
+  text-align: center;
+  margin-top: 7%;
 }
-#branchImg:hover{
-    transform: scale(1.5);
-    box-shadow: 0px 0px 10px rgb(151, 151, 151);
-    padding: 0;
+#captionLink{
+  background-color: #20b2aa;
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  width: 30%;
+  font-weight: bold;
+  font-size: large;
 }
-#langImg{
-    width: 20%;
-    margin-right: 3%;
-    padding-top: 5%;
-    padding-left: 3%;
-    border-radius: 30%;
-    border: 1px transparent;
-    transition: padding;
+#captionLink:hover{
+  background-color: rgb(44, 136, 131);
+  border: none;
+  width: 30%;
 }
-#langImg:hover{
-    padding: 0;
+#captionLink:focus{
+  outline: none;
+  border: 1px solid rgb(49, 136, 132);
 }
-.next-step, .prev-step{
-    color: rgb(0, 0, 0);
-    background-color: rgb(247, 247, 247);
-    padding: 10px;
-    border-radius: 2.5px;
-    border: none;
-    width: 100%;
+#reminds{
+    margin-top: 2%;
+    margin-left: 6%;
 }
-.next-step:hover, .prev-step:hover{
-    color: rgb(255, 255, 255);
-    background-color: rgb(155, 0, 0);
+#virtualClasses{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background-position: top;
+    background-size: 100%;
+    background-image: url(../img/Backgrounds/virtualClass.png);
+    border-radius: 0px 20px 0px 20px;
+    border: 1px solid whitesmoke;
+
 }
+#virtualClasses:hover{
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px rgb(218, 218, 218);
+}
+#infoIcon{
+  width: 10%;
+  float: left;
+  margin-right: 2%;
+}
+#textReminds{
+  line-height: 90px;
+}
+#formNotes{
+  width: 100%;
+}
+#pillField{
+  width: 38%;
+}
+#columnForm{
+  padding: 0;
+  margin-bottom: 1%;
+}
+#langlevel{
+  background-color: white;
+  border-radius: 20px 0px 0px 20px;
+  width: 100%;
+  border: 1px solid rgb(235, 235, 235);
+}
+#typeExam{
+  background-color: white;
+  border-radius: 0px 0px 0px 0px;
+  width: 100%;
+  border: 1px solid rgb(235, 235, 235);
+}
+#units{
+  background-color: white;
+  border-radius: 0px 20px 20px 0px;
+  width: 100%;
+  border: 1px solid rgb(235, 235, 235);
+}
+#notes{
+  background-color: white;
+  border-radius: 20px 0px 0px 20px;
+  width: 100%;
+  border: 1px solid rgb(235, 235, 235);
+
+}
+#langlevel:hover, #typeExam:hover, #units:hover{
+  border: 1px solid #9b0000;
+}
+#langlevel:focus, #typeExam:focus, #units:focus, #notes:focus{
+  outline: none;
+  box-shadow: none;
+}
+#notes:hover{
+  background-color: #9b0000;
+  border: 1px solid #9b0000;
+
+}
+#btnSaveN{
+  background-color: #9b0000;
+  border-radius: 0px 20px 20px 0px;
+  width: 100%;
+  border: 1px solid #9b0000;
+}
+#btnSaveN:focus{
+  outline: none;
+}
+#sec1{
+  margin-top: 6%;
+  background-position: center;
+  background-size: 100%;
+  background-image: url(../img/Backgrounds/redFigures.png);
+  color: white;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.596);
+}
+#workbook{
+  margin-left: 6%;
+}
+#workIcon{
+  width: 14%;
+  margin-top: 3%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  float: right;
+  margin-right: 7%;
+}
+#textWork{
+  font-family: Antonio;
+  letter-spacing: 5px;
+  margin-top: 4%;
+}
+#linkIcon{
+  width: 5%;
+  margin-top: 0.1%;
+  margin-bottom:2%;
+  float: left;
+  border-radius: 100%;
+  margin-right: 2%;
+}
+#aWork{
+  margin-top: 4%;
+  line-height: 70px;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+
+}
+#doubts{
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: 100%;
+  background-image: url(../img/Backgrounds/banners/doubts.png);
+}
+#doubtsLink{
+  margin-top: 12%;
+  border-radius: 30px 30px 30px 30px;
+  border: 1px solid whitesmoke;
+  width: 30%;
+  height: 20%;
+  line-height: 35px;
+  background-color: #9b0000;
+}
+#doubtsLink:hover{
+  background-color: #680000;
+}
+#sec2{
+  background-color: #fcfcfc;
+  width: 100%;
+}
+#footer {
+  width: 100%;
+  background-color: #fcfcfc;
+}
+#contact{
+  margin-left: 6%;
+  margin-right: 6%;
+  background-color: #fcfcfc;
+
+}
+#mailIcon{
+  width: 70%;
+  margin-bottom:2%;
+  margin-right: 2%;
+}
+#textContact{
+  font-family: Antonio;
+  letter-spacing: 5px;
+  font-size: 50px;
+  color: rgb(44, 44, 44);
+}
+#formContact{
+  width: 90%;
+  margin-top: 5%;
+}
+#columnFormC{
+  border-radius: 30px 30px 30px 30px;
+  border: 1px solid rgb(233, 233, 233);
+  margin-bottom: 3%;
+}
+#columnFormC:hover{
+  border: 1px solid #20b2aa;
+}
+#contactIcon{
+  color: #20b2aa;
+  font-size: 30px;
+}
+#contactField{
+  border: none;
+  background-color: transparent;
+
+}
+#contactField:focus, #messageC:focus, #doubtsLink:focus{
+  box-shadow: none;
+}
+#messageC{
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border: none;
+}
+#containerBtnContact{
+  background-color: #20b2aa;
+  border-radius: 30px 30px 30px 30px;
+}
+#containerBtnContact:hover{
+  background-color: rgb(44, 136, 131);
+}
+#btnSaveC{
+  background-color: transparent;
+  border-radius: 0;
+  width: 100%;
+  border: none;
+  color: rgb(44, 44, 44);
+}
+#btnSaveN:hover{
+  background-color: transparent;
+  color: #680000;
+}
+#btnSaveN:focus, #btnSaveC:focus{
+  outline: none;
+  box-shadow: none;
+}
+#notesIcon{
+  width: 10%;
+  float: left;
+  margin-right: 2%;
+}
+#notesIcon:hover{
+  transform: scale(1.5, 1.5);
+  margin-right: 4%;
+}
+#infoNotes{
+  color: #9b0000;
+  font-style: italic;
+
+}
+#containerMessage{
+  flex: none;
+}
+

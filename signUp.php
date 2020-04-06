@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+@ini_set('display_errors', 0);
 include_once 'include/users.php';
 ?>
 <!DOCTYPE html>
@@ -12,9 +14,9 @@ include_once 'include/users.php';
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/backChange.css">
-    <link rel="stylesheet" type="text/css" href="css/wizard.css">
-    <script type="text/javascript" src="js/bable.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/signUp.css">
+    <script type="text/javascript" src="js/wizard.js"></script>
+
     <title>Bable | Crear cuenta</title>
 </head>
 
@@ -23,20 +25,15 @@ include_once 'include/users.php';
         <div class="container-fluid" id="header">
             <div class="row">
                 <div class="col-md-2">
-                    <div id="logo">
-                        <img src="">
-                    </div>
+                    <div id="logo"></div>
                 </div>
                 <div class="col-md-10" id="reg">
-                    <a href="signIn.php" role="button" id="login"><b>Iniciar sesion</b></a>
+                    <a href="index.php" role="button" id="login"><b>Iniciar sesion</b></a>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
-            <div id="title"></div>
-            <div id="titlep">
-                <p><b>| CREAR CUENTA |</b></p>
-            </div>
+            <div id="title">BABLE</div>
         </div>
         <div class="container-fluid" id="content">
             <div class="wizard">
@@ -89,19 +86,19 @@ include_once 'include/users.php';
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" name="namec" placeholder="Nombres">
+                                <input type="text" name="namec" autocomplete="off" placeholder="Nombres">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" name="lastname" placeholder="Apellidos">
+                                <input type="text" name="lastname" autocomplete="off" placeholder="Apellidos">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" name="code" placeholder="Codigo">
+                                <input type="text" name="code" autocomplete="off" placeholder="Codigo">
                                 <small id="info">El codigo debe contener minimo 4 caracteres y maximo 15.</small>
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="email" name="email" placeholder="Correo electrónico">
+                                <input type="email" name="email" autocomplete="off" placeholder="Correo electrónico">
                                 <small id="info">Por favor, escriba una direccion de correo electronico real.</small>
                             </div>
                         </div>
@@ -114,17 +111,17 @@ include_once 'include/users.php';
                         <div class="form-group col-md-12">
                             <small id="info">El nombre de usuario debe contener minimo 4 caracteres y maximo 64. Ademas,
                                 debe ser diferente al nombre, apellido y correo electronico.</small>
-                            <input type="text" name="username" id="nameUser" placeholder="Nombre de usuario">
+                            <input type="text" name="username" id="nameUser" autocomplete="off" placeholder="Nombre de usuario">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="password" name="pass" placeholder="Contraseña">
+                                <input type="password" name="pass" autocomplete="off" placeholder="Contraseña">
                                 <small id="info">La contraseña debe tener al menos 8 caracteres, 1 caracter numerico y 1
                                     mayuscula. Ademas, debe ser diferente al nombre, apellido y correo
                                     electronico.</small>
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="password" name="vpass" placeholder="Repetir contraseña">
+                                <input type="password" name="vpass" autocomplete="off" placeholder="Repetir contraseña">
                                 <small id="info">Las contraseñas deben ser iguales.</small>
                             </div>
                         </div>
@@ -141,7 +138,7 @@ include_once 'include/users.php';
                     <div class="tab-pane" role="tabpanel" id="step3">
                         <div class="form-row">
                             <div class="form-group col-md-12" id="questinfo">
-                                <h4><b>Preguntas de seguridad</b></h4>
+                                <h2><b>Preguntas de seguridad</b></h2>
                                 <p>Selecciona dos preguntas de seguridad y escribe su respuesta correspondiente. Estas
                                     preguntas nos ayudaran a verificar tu identidad en caso de que olvides tu
                                     contraseña.
@@ -155,44 +152,44 @@ include_once 'include/users.php';
                             <div class="form-group col-md-6">
                                 <select name="squest1">
                                     <option selected id="selected">1. Seleccione la pregunta</option>
-                                    <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
-                                    <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
-                                    <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?
+                                    <option value="¿En que ciudad se conocieron tus padres?">¿En que ciudad se conocieron tus padres?</option>
+                                    <option value="¿Cual seria tu trabajo ideal?">¿Cual seria tu trabajo ideal?</ption>
+                                    <option value="¿Cual era el nombre de pila de tu mejor amigo?">¿Cual era el nombre de pila de tu mejor amigo?
                                     </option>
-                                    <option value="quest4">¿Cual es tu lugar favorito?</option>
-                                    <option value="quest5">¿Cual era la marca de tu primer celular?</option>
-                                    <option value="quest6">¿Como se llamaba tu primera mascota?</option>
-                                    <option value="quest7">¿Cual era la raza de tu primera mascota?</option>
-                                    <option value="quest8">¿Que fue lo primero que aprendiste a cocinar?
+                                    <option value="¿Cual es tu lugar favorito?">¿Cual es tu lugar favorito?</option>
+                                    <option value="¿Cual era la marca de tu primer celular?">¿Cual era la marca de tu primer celular?</option>
+                                    <option value="¿Como se llamaba tu primera mascota?">¿Como se llamaba tu primera mascota?</option>
+                                    <option value="¿Cual era la raza de tu primera mascota?">¿Cual era la raza de tu primera mascota?</option>
+                                    <option value="¿Que fue lo primero que aprendiste a cocinar?">¿Que fue lo primero que aprendiste a cocinar?
                                     </option>
-                                    <option value="quest9">¿Cual era tu cantante o grupo preferido en el instituto?
+                                    <option value="¿Cual era tu cantante o grupo preferido en el instituto?">¿Cual era tu cantante o grupo preferido en el instituto?
                                     </option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <select name="squest2">
                                     <option selected>2. Seleccione la pregunta</option>
-                                    <option value="quest1">¿En que ciudad se conocieron tus padres?</option>
-                                    <option value="quest2">¿Cual seria tu trabajo ideal?</ption>
-                                    <option value="quest3">¿Cual era el nombre de pila de tu mejor amigo?
+                                    <option value="¿En que ciudad se conocieron tus padres?">¿En que ciudad se conocieron tus padres?</option>
+                                    <option value="¿Cual seria tu trabajo ideal?">¿Cual seria tu trabajo ideal?</ption>
+                                    <option value="¿Cual era el nombre de pila de tu mejor amigo?">¿Cual era el nombre de pila de tu mejor amigo?
                                     </option>
-                                    <option value="quest4">¿Cual es tu lugar favorito?</option>
-                                    <option value="quest5">¿Cual era la marca de tu primer celular?</option>
-                                    <option value="quest6">¿Como se llamaba tu primera mascota?</option>
-                                    <option value="quest7">¿Cual era la raza de tu primera mascota?</option>
-                                    <option value="quest8">¿Que fue lo primero que aprendiste a cocinar?
+                                    <option value="¿Cual es tu lugar favorito?">¿Cual es tu lugar favorito?</option>
+                                    <option value="¿Cual era la marca de tu primer celular?">¿Cual era la marca de tu primer celular?</option>
+                                    <option value="¿Como se llamaba tu primera mascota?">¿Como se llamaba tu primera mascota?</option>
+                                    <option value="¿Cual era la raza de tu primera mascota?">¿Cual era la raza de tu primera mascota?</option>
+                                    <option value="¿Que fue lo primero que aprendiste a cocinar?">¿Que fue lo primero que aprendiste a cocinar?
                                     </option>
-                                    <option value="quest9">¿Cual era tu cantante o grupo preferido en el instituto?
+                                    <option value="¿Cual era tu cantante o grupo preferido en el instituto?">¿Cual era tu cantante o grupo preferido en el instituto?
                                     </option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" placeholder="1. Escribe tu respuesta" name="sanswer1">
+                                <input type="text" autocomplete="off" placeholder="1. Escribe tu respuesta" name="sanswer1">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" placeholder="2. Escribe tu respuesta" name="sanswer2" id="ranswer">
+                                <input type="text" autocomplete="off" placeholder="2. Escribe tu respuesta" name="sanswer2" id="ranswer">
                             </div>
                             <br>
                         </div>
@@ -241,9 +238,7 @@ include_once 'include/users.php';
         </form>
     </div>
     <div class="container-fluid" id="header">
-        <div class="pull-right" id="info">
-            <p>Fotografia por <a href="https://www.instagram.com/banksy/"><b>@Banksy</b></a></p>
-        </div>
+        <div id="info"></div>
     </div>
     </div>
 
