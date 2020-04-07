@@ -5,210 +5,212 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrapp.min.css">
+    <script src="js/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrapp.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/home.css">
-    <script type="text/javascript" src="js/bable.js"></script>
+
     <title>Bable | Home</title>
 </head>
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a class="navbar-brand"></a></li>
-                    <li><a href="home.php" id="info"><b>Home</b></a></li>
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <a class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav pull-sm-left">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.php" id="info"><b>Home</b>
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="branch.php" id="info"><b>Reservar</b></a>
+                    </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-center">
-                    <div id="welcome"><b>Bienvenido <?php echo $user->getUser(); ?></b></div>
+                <ul class="navbar-nav mx-auto">
+                    <div id="welcome"><b>Bienvenido <?php echo $user->getUser();?></b></div>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" id="userIcon" data-toggle="dropdown">
+                <ul class="navbar-nav pull-sm-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-toggle="dropdown">
                             <span>
                                 <i class="material-icons">account_circle</i>
                             </span>
-                            <ul class="dropdown-menu">
-                                <li><a href="#"><i class="material-icons" id="configIcon">settings</i>Configuracion</a>
-                                </li>
-                                <li>
-                                    <a href="include/signOut.php" role="button"><i class="material-icons"
-                                            id="configIcon">settings_power</i><b>Cerrar sesion</b></a>
-                                </li>
-                            </ul>
                         </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="account.php"><i class="material-icons"
+                                    id="configIcon">settings</i>Configuracion</a>
+                            <a class="dropdown-item" href="include/signOut.php" role="button"><i
+                                    class="material-icons" id="configIcon">settings_power</i><b>Cerrar sesion</b></a>
+                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="container-fluid">
-        <img src="img/Backgrounds/banners/banner1.png" id="book">
+    <div class="container-fluid" id="content">
+        <div class="container-fluid" id="carouselSmartNews">
+            <div id="smartNews" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#smartNews" data-slide-to="0" class="active"></li>
+                    <li data-target="#smartNews" data-slide-to="1"></li>
+                    <li data-target="#smartNews" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Smart/slide1.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Smart/slide2.jpg">
+                        <div class="carousel-caption">
+                            <h3 id="captionTitle">EXPERIENCIAS SMART</h3>
+                            <p id="captionDesc">Smart brinda a sus estudiantes actividades complementarias a las sesiones de aprendizaje, que se desarrollan fuera del salón de clase. Nuestros clubes y talleres son el apoyo que tienen nuestros estudiantes para...</p>
+                            <a id="captionLink" class="btn btn-primary" href="https://smart.edu.co/experiencias-smart/" role="button">Ver post</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Smart/slide3.jpg">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#smartNews" data-slide="prev">
+                    <span class="material-icons" id="slideArrow">
+                        chevron_left
+                    </span>
+                </a>
+                <a class="carousel-control-next" href="#smartNews" data-slide="next">
+                    <span class="material-icons" id="slideArrow">
+                        chevron_right
+                    </span>
+                </a>
+            </div>
+        </div>
+        <section>
+            <div class="row" id="reminds">
+                <div class="col-sm-8">
+                    <img id="infoIcon" src="img/Backgrounds/info.png">
+                    <h2 id="textReminds">Recordatorios</h2>
+                    <hr>
+                    <p>No olvides ingresar la nota de quiz o examen final una vez los hayas tomado. De esta manera, podras visualizar tus notas y tener un record de ellas.
+                    <br><br>
+                    Para ello, llena el siguiente formulario.
+                    <br>
+                    <b id="infoNotes">Click en la imagen para visualizar tu record de notas.</b>
+                    </p>
+                    <a href="noteRecord.php"><img id="notesIcon" src="img/Backgrounds/notes.png"></a>
+
+                    <form action="" method="post" id="formNotes">
+                    <?php include_once 'include/homeFields.php';?>
+                        <div class="row">
+                            <div class="col-sm-4" id="columnForm">
+                                <input id="langlevel" type="text" class="form-control" name="langlevel" placeholder="English A1">
+                            </div>
+                            <div class="col-sm-4" id="columnForm">
+                            <select name="typeExam" id="typeExam" class="form-control">
+                                <option value="unspecified">Tipo examen</option>
+                                <option value="Quiz">Quiz</option>
+                                <option value="Final exam">Examen final</option>
+                            </select>
+                            </div>
+                            <div class="col-sm-4" id="columnForm">
+                                <input id="units" type="text" class="form-control" name="units" placeholder="Unidad(es)">
+                            </div>
+                        </div>
+                        <div class="row" id="pillField">
+                            <div class="col-sm-7" id="columnForm">
+                                <input id="notes" type="text" class="form-control" name="note" placeholder="Nota final 0.0">
+                            </div>
+                            <div class="col-sm-5" id="columnForm">
+                                <button id="btnSaveN"  name="btnSaveN" type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <a href="virtualClasses.html">
+                        <div id="virtualClasses"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="sec1">
+            <div class="row" id="workbook">
+                <div class="col-sm-12">
+                    <img id="workIcon" src="img/Backgrounds/cambridgeLogo.png">
+                    <h2 id="textWork">Workbook</h2>
+                    <p>Recuerda que antes de presentar tu quiz, debes realizar el workbook.
+                    <br>
+                    ¡No busques mas! Aqui te hemos dejado el link directo para que puedas realizar tus actividades.
+                    </p>
+                    <img id="linkIcon" src="img/Backgrounds/link.png">
+                    <a href="https://www.cambridgelms.org/main/p/splash" id="aWork">Workbook Cambridge LMS</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="doubts">
+                <a id="doubtsLink" class="btn btn-primary" href="doubts.html" role="button">Resuelvelas aqui</a>
+            </div>
+        </section>
+        <section id="sec2">
+            <img src="img/Backgrounds/banners/banner6.png" id="footer">
+            <div class="row" id="contact">
+                <div class="col-sm-6">
+                    <img src="img/Backgrounds/mail.png" id="mailIcon">
+                </div>
+                <div class="col-sm-6">
+                    <h2 id="textContact">CONTÁCTANOS</h2>
+                    <form action="" method="post" id="formContact">
+                    <?php include_once 'include/homeFields.php';?>
+                        <div class="row" id="columnFormC">
+                            <div class="col-sm-1">
+                                <span class="material-icons" id="contactIcon">
+                                    person
+                                </span>
+                            </div>
+                            <div class="col-sm-11">
+                                <input type="text" class="form-control" name="nameC" id="contactField"
+                                    placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="row" id="columnFormC">
+                            <div class="col-sm-1">
+                                <span class="material-icons" id="contactIcon">
+                                    email
+                                </span>
+                            </div>
+                            <div class="col-sm-11">
+                                <input type="email" class="form-control" name="emailC" id="contactField"
+                                    placeholder="Correo electronico">
+                            </div>
+                        </div>
+                        <div class="row" id="columnFormC">
+                            <div class="col-sm-11" id="containerMessage">
+                                <textarea id="messageC" placeholder="Mensaje" name="messageC"
+                                    class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="row" id="containerBtnContact">
+                            <div class="col-sm-12">
+                                <button id="btnSaveC" name="btnSaveC" type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <img src="img/Backgrounds/banners/footer.png" id="footer">
+        </section>
     </div>
-    <div class="container-fluid" id="page">
-        <div class="container-fluid" id="content">
-            <div class="wizard">
-                <div class="wizard-inner">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active">
-                            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Primer paso">
-                                <span>
-                                    <img src="img/Options/numbers/step1.png" id="steps">
-                                    <h1 id="subtitle">Sede</h1>
-                                    <p>Selecciona la sede en la que reservaras clase.</p>
-                                </span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="disabled">
-                            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Segundo paso">
-                                <span>
-                                    <img src="img/Options/numbers/step2.png" id="steps">
-                                    <h1 id="subtitle">Idioma</h1>
-                                    <p>Selecciona el idioma que estudias.</p>
-                                </span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="disabled">
-                            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Tercer paso">
-                                <span>
-                                    <img src="img/Options/numbers/step3.png" id="steps">
-                                    <h1 id="subtitle">Libro</h1>
-                                    <p>Selecciona el nivel del idioma que estudias.</p>
-                                </span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="disabled">
-                            <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Cuarto paso">
-                                <span>
-                                    <img src="img/Options/numbers/step4.png" id="steps">
-                                    <h1 id="subtitle">Dia y hora</h1>
-                                    <p>Selecciona el dia y la hora en la que quieres reservar.</p>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <form action="" method="post">
-                <div class="tab-content">
-                    <div class="tab-pane active" role="tabpanel" id="step1">
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <input type="image" src="img/Options/branches/branch1.png" name="img" value="bello"
-                                    id="branch">
-                                <input type="image" src="img/Options/branches/branch2.png" name="img" value="arkadia"
-                                    id="branch">
-                                <input type="image" src="img/Options/branches/branch3.png" name="img" value="centro"
-                                    id="branch">
-                                <input type="image" src="img/Options/branches/branch4.png" name="img" value="poblado"
-                                    id="branch">
-                                <input type="image" src="img/Options/branches/branch5.png" name="img" value="itagui"
-                                    id="branch">
-                                <input type="image" src="img/Options/branches/branch6.png" name="img" value="calasanz"
-                                    id="branch">
-                                <input type="image" src="img/Options/branches/branch1.png" name="img" value="olaya"
-                                    id="branch">
-                            </div>
-                        </div>
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="next-step "><b>Siguiente</b></button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" role="tabpanel" id="step2">
-                        <div class="form-group col-md-12">
-                            <input type="image" src="img/Options/langs/ingles.png" name="img" value="ingles"
-                                id="idioma">
-                            <input type="image" src="img/Options/langs/frances.png" name="img" value="frances"
-                                id="idioma">
-                            <input type="image" src="img/Options/langs/aleman.png" name="img" value="aleman"
-                                id="idioma">
-                        </div>
-                        <div class="form-group col-md-12">
-                            <ul class="list-inline pull-right">
-                                <li><button type="button" class="prev-step"><b>Anterior</b></button>
-                                </li>
-                                <li><button type="button" class="next-step"><b>Siguiente</b></button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane" role="tabpanel" id="step3">
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <input type="image" src="img/Options/levels/level1.png" name="img" value="a1"
-                                    id="levels">
-                                <input type="image" src="img/Options/levels/level2.png" name="img" value="a2"
-                                    id="levels">
-                                <input type="image" src="img/Options/levels/level3.png" name="img" value="b1"
-                                    id="levels">
-                                <input type="image" src="img/Options/levels/level4.png" name="img" value="b2"
-                                    id="levels">
-                                <input type="image" src="img/Options/levels/level5.png" name="img" value="c1"
-                                    id="levels">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <input type="image" src="img/Options/levels/book1.png" name="img" value="book1"
-                                    id="books">
-                                <input type="image" src="img/Options/levels/book2.png" name="img" value="book2"
-                                    id="books">
-                                <input type="image" src="img/Options/levels/book3.png" name="img" value="book3"
-                                    id="books">
-                                <input type="image" src="img/Options/levels/book4.png" name="img" value="book4"
-                                    id="books">
-                                <input type="image" src="img/Options/levels/book5.png" name="img" value="book5"
-                                    id="books">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <ul class="list-inline pull-right">
-                                    <li><button type="button" class="prev-step"><b>Anterior</b></button>
-                                    </li>
-                                    <li><button type="button" class="next-step"><b>Siguiente</b></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane" role="tabpanel" id="step4">
-                        <div class="form-row">
-                            <div class="col-md-12">
-                                <input type="date" name="date" placeholder="Ingrese el dia y la hora">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <ul class="list-inline pull-right">
-                                    <li><button type="button" class="prev-step"><b>Anterior</b></button>
-                                    </li>
-                                    <li><button type="submit" name="btnSignUp"><b>Crear cuenta</b></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </form>
-            <div class="container-fluid">
-                <img src="img/Backgrounds/banners/banner3.png" id="book">
-            </div>
 </body>
 
 </html>

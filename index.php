@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(0);
+@ini_set('display_errors', 0);
 include_once 'include/user.php';
 include_once 'include/userSession.php';
 
@@ -19,8 +20,7 @@ if(isset($_SESSION['user'])){
         $user->setUser($userSignIn);
         include_once 'home.php';
     }else{
-        $errorSignIn = "¡Ups! El nombre de usuario o contraseña es incorrecto. Intenta con un nombre de usuario o contraseña diferente.";
-        include_once 'signIn.php';
+        echo'<script type="text/javascript"> alert("¡OH NO! La contraseña o usuario que has ingresado no es correcta. Intentalo de nuevo"); window.location.href="index.php" </script>';
     }
 }else{
     include_once 'signIn.php';
