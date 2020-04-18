@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Antonio;
+    src: url(../fonts/Antonio-Bold.ttf);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font: 18px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  }
+  /* 1. BACKGROUND */
+  body {
+    overflow-x: hidden;
+  }
+  /* 2. CONTAINER-FLUID PAGE */
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+  #content {
+    margin-top: 5%;
+    margin-left: 6%;
+  }
+  p{
+    margin-right: 10%;
+  }
+  #passIcon{
+    width: 100%;
+    float: left;
+    margin-top: 20%;
+  }
+  #formConfig{
+    width: 50%;
+    margin-top: 6%;
+    margin-bottom: 10%;
+  }
+  #oldPass, #pass, #vpass{
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid rgb(233, 233, 233);
+    margin-bottom: 4%;
+  }
+  #oldPass:hover, #pass:hover, #vpass:hover{
+    border: 1px solid lightseagreen;
+  }
+  #oldPass:focus, #pass:focus, #vpass:focus{
+    border: 1px solid lightseagreen;
+    outline: none;
+    box-shadow: none;
+  }
+#btnChangePass{
+    background-color:  lightseagreen;
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    font-weight: bold;
+    margin-top: 3%;
+  }
+  #btnChangePass:hover{
+    background-color:  rgb(19, 102, 98);
+  }
+  #fPassLink{
+    background-color: white;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid lightseagreen;
+    color: lightseagreen;
+  }
+  #fPassLink:hover{
+    background-color: #20b2aa;
+    color: white;
+  }
+  #btnChangePass:focus, #fPassLink:focus{
+    box-shadow: none;
+    outline: none;
+  }
+  #footer {
+    width: 100%;
+}
+/* 12. ALERT PHP MESSAGE */
+#alert {
+  background-color: whitesmoke;
+  color: black;
+  border: solid rgb(240, 240, 240) 3px;
+  text-align: center;
+  overflow: auto;
+  padding: 10px;
+  height: 49px;
+  top: 308px;
+  z-index: 100;
+}
+#alert a {
+  color: lightseagreen !important;
+}

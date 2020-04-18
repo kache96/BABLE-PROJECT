@@ -1,5 +1,4 @@
 <?php
-
 include_once 'db.php';
 
 class User extends DB{
@@ -17,18 +16,19 @@ class User extends DB{
             return false;
         }
     }
-        public function setUser($user){
-            $query = $this->connect()->prepare('SELECT * FROM user WHERE username = :user');
-            $query->execute(['user' => $user]);
+    
+    public function setUser($user){
+        $query = $this->connect()->prepare('SELECT * FROM user WHERE username = :user');
+        $query->execute(['user' => $user]);
 
-            foreach ($query as $currentUser){
-                $this->username = $currentUser['username'];
-            }
+        foreach ($query as $currentUser){
+            $this->username = $currentUser['username'];
         }
+    }
 
-        public function getUser(){
-            return $this->username;
-        }
+    public function getUser(){
+        return $this->username;
+    }
 }
 
 ?>
