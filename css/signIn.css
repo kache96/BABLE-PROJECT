@@ -1,160 +1,164 @@
+@font-face {
+  font-family: Antonio;
+  src: url(../fonts/Antonio-Bold.ttf);
+}
 * {
-    margin: 0;
-    padding: 0;
-    font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font: 16px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 /* 1. BACKGROUND BANKSY IMAGE */
-body{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+body {
+  background-image: url(../img/Backgrounds/backBubbles.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 /* 2. CONTAINER-FLUID PAGE */
-.container-fluid{
-    margin: 0;
-    padding: 0;
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 /* 3. PAGE HEADER */
 /* 3.1 Container-fluid header */
-#header{
-    background: transparent;
-    width: 100%;
-    height: 50%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-    padding-right: 3%;
+#header {
+  background: transparent;
+  width: 100%;
+  height: 50%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 /* 3.2 Header logo */
-#logo{
-    height: 40px;
-    background-size: 50px; 
-    background-repeat: no-repeat;  
-    background-image: url(../img/Logos/logow.png);
-}
-/* 3.3 Header logo hover */
-#logo:hover{
-    background-image: url(../img/Logos/logor.png);
+#logo {
+  height: 40px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-image: url(../img/Logos/logor.png);
 }
 /* 4. DIV "SIGN UP" BUTTON */
-#reg{
-    padding-top: 1%;
-    height: 40px;
-    text-align: right;
+#reg {
+  padding-top: 1%;
+  height: 40px;
+  text-align: right;
 }
 /* 5."SIGN UP" BUTTON */
-#register{
-    color: #939192;
-    background: #FEFDFD;
-    padding: 9px;
-    border-radius: 2px;
-    text-align: center;
-    width: 130px;
+#register {
+  color: white;
+  background: #9b0000;
+  padding: 9px;
+  border-radius: 20px 20px 20px 20px;
+  text-align: center;
+  width: 130px;
 }
 /* 5.1"Sign up" button hover */
-#register:hover{
-    color: #9b0000;
+#register:hover {
+  background: white;
+  border: 1px solid #9b0000;
+  color: #9b0000;
 }
 /* 5.2"Sign up" button focus */
-#register:focus{
-    color: rgb(155, 0, 0);
-    border: solid rgb(155, 0, 0) 1px;
+#register:focus {
+  outline: none;
+  box-shadow: none;
 }
 /* 6. BABLE NAME IMAGE*/
-#title{
-    height: 150px;
-    background-size: 300px; 
-    background-position: center;    
-    background-repeat: no-repeat; 
-    background-image: url(../img/Logos/titlewh.png);
-}
-/* 6.1 Bable name image hover */
-#title:hover{
-    background-image: url(../img/Logos/titlerh.png);
-}
-/* 7. TEXT "CREATE ACCOUNT" */
-#titlep{
-    text-align: center;
-    color: white;
+#title {
+  font-family: Antonio;
+  font-size: 100px;
+  text-align: center;
+  color: #9b0000;
 }
 /* 7. CONTAINER-FLUID "CONTENT" */
-#content{
-    max-width: 30%;
-    background: transparent;
-    text-align: center;
-    display: block;
-    padding-top: 1%;
-    padding-bottom: 5%;
-
+#content {
+  max-width: 30%;
+  margin-left: 35%;
+  background: transparent;
+  text-align: center;
+  display: block;
+  padding-top: 1%;
+  padding-bottom: 5%;
 }
 /* 8. INPUTS TEXT */
-input{
-    border-style: none;
-    border-radius: 0;
-    padding: 4%;
-    background: #FEFDFD;
-    width: 100%;
+input {
+  border-radius: 40px 40px 40px 40px;
+  padding: 4%;
+  background: #fefdfd;
+  border: solid rgb(184, 184, 184) 1px;
+  width: 100%;
+  margin-bottom: 1%;
 }
 /* 8.1 Inputs text hover */
-input:hover{
-    border-bottom: solid rgb(155, 0, 0) 1px;
-}
-/* 8.2 Input "nameUser" */
-#nameuser{
-    border-bottom: solid rgb(212, 212, 212) 0.1px;
-}
-/* 8.3 Input "nameUser" hover */
-#nameuser:hover{
-    border-bottom: solid rgb(155, 0, 0) 1px;
+input:hover {
+  border: solid rgb(155, 0, 0) 1px;
 }
 /* 8.4 Input "password" */
-#password{
-    margin-bottom: 5%;
+#password {
+  margin-bottom: 10%;
 }
 /* 8.5 Input, button focus */
-input:focus, button:focus{
-    outline: none;
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 /* 9. TEXT "P" */
-#info{
-    color: white;
-    text-align: right;
+#info {
+  height: 100px;
+  background-image: url(../img/Logos/smart.png);
+  background-size: 100px;
+  background-repeat: no-repeat;
+  margin-left: 92%;
+
 }
 /* 10. BUTTONS */
-button{
-    color: rgb(70, 70, 70);
-    background-image: url(img/Gifs/figures.gif);
-    background-size: 100% ;
-    padding: 10px;
-    border-radius: 2.5px;
-    border-style: none;
-    width: 100%;
+button {
+  color: white;
+  background: #9b0000;
+  background-size: 100%;
+  padding: 10px;
+  border: 1px solid #9b0000;
+  border-radius: 40px 40px 40px 40px;
+  width: 100%;
 }
 /* 10.1 Buttons hover */
-button:hover{
-    color: #9b0000;
+button:hover {
+  background: white;
+  color: #9b0000;
 }
 /* 10.2 Buttons focus */
-button:focus{
-    color: rgb(155, 0, 0);
-    border: solid rgb(155, 0, 0) 1px;
+button:focus {
+  color: rgb(155, 0, 0);
+  border: solid rgb(155, 0, 0) 1px;
+  outline: none;
+  box-shadow: none;
 }
 /* 11. LINKS */
 /* 11.1 Text link color */
-a{
-    color: white;
+a {
+  color: #9b0000;
 }
 /* 11.2 Text link hover */
-a:hover{
-    text-decoration: none;
-    color: rgb(155, 0, 0);
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #9b0000;
+
 }
 /* 12. ALERT PHP MESSAGE */
-#alert{
-    background-color: #00000057;
-    color: rgb(255, 255, 255);
-    border: solid rgba(0, 0, 0, 0.089) 3px;
-    width: 100%;
-    text-align:center;
-    padding: 20px;
+#alert {
+  background-color: whitesmoke;
+  color: black;
+  border: solid rgb(240, 240, 240) 3px;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  height: 49px;
+  position: fixed;
+  top: 308px;
+  z-index: 100;
+}
+#alert a {
+  color: #9b0000 !important;
 }

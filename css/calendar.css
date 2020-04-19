@@ -1,0 +1,254 @@
+* {
+  font: 18px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+}
+.fc-unthemed .fc-content,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-list-heading td,
+.fc-unthemed .fc-list-view,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-row,
+.fc-unthemed tbody,
+.fc-unthemed td,
+.fc-unthemed th,
+.fc-unthemed thead {
+  border-color: #f8f9fa;
+}
+.fc-state-default {
+  background-image: none !important;
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 0.5 !important;
+  box-shadow: none !important;
+  border: 1px solid whitesmoke !important;
+  color: black !important;
+  text-shadow: none;
+  margin: 1px !important;
+}
+.fc-state-default:hover {
+  background-color: #9b0000 !important;
+  color: white !important;
+}
+.fc-state-default:focus {
+  outline: 0;
+}
+.fc-state-disabled:disabled {
+  background-image: none !important;
+  opacity: initial;
+  box-shadow: none !important;
+}
+.fc-future:hover {
+  background-color: rgb(243, 243, 243) !important;
+}
+.fc-day-header,
+.fc-day-header.fc-sun {
+  background-color: whitesmoke;
+  height: 40px;
+  line-height: 3;
+  font-weight: bolder;
+}
+.fc-sun {
+  background-color: rgb(245, 245, 245);
+}
+.fc-day-number {
+  font-size: 1.1rem;
+}
+.fc-past {
+  color: rgb(192, 192, 192);
+}
+.fc-sun.fc-today{
+  background-color: rgb(245, 245, 245) !important;
+}
+.fc-today {
+  font-weight: bolder;
+  color: #9b0000;
+  background-color: transparent !important;
+}
+.fc-content {
+  font-size: smaller !important;
+}
+.modal-dialog {
+  max-width: 45% !important;
+  max-height: 100% !important;
+  margin-bottom: 50px !important;
+}
+.modal-header {
+  margin-bottom: 3%;
+  background-color: #9b0000;
+  color: white;
+  border-bottom: 1px solid #9b0000;
+}
+.modal-body {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.modal-footer {
+  margin-top: 6%;
+  background-color: transparent;
+  background-image: url(../img/Gifs/bakmove.gif);
+  background-size: 100%;
+  background-repeat: repeat;
+  border-top: 1px solid #9b0000;
+}
+#x {
+  color: white;
+  font-size: 30px;
+  opacity: 1;
+  text-shadow: none;
+}
+.close:focus {
+  outline: none;
+}
+#event_id {
+  border: none;
+  font-weight: bold;
+  width: 37%;
+  background-color: transparent;
+  font-size: large;
+  color: white;
+}
+#titleN {
+  font-size: 18px;
+  font-weight: bold;
+}
+#studentName{
+  border: none;
+  width: 100%;
+  margin-bottom: 5%;
+  padding: 0;
+}
+#langLvl {
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5%;
+  padding: 0;
+}
+#branch {
+  border: none;
+  font-size: larger;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5%;
+  padding: 0;
+}
+input,
+select {
+  width: 100%;
+  padding: 9px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  border-bottom-color: rgb(230, 230, 230);
+  width: 100%;
+  outline: none;
+}
+div.row {
+  margin-top: 1%;
+}
+.col-md-5 p {
+  margin: 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-size: large;
+}
+select:hover {
+  border: 1px solid rgb(27, 25, 25);
+}
+.custom-select:focus {
+  border: 1px solid #9b0000;
+  box-shadow: none;
+}
+input:hover {
+  border: 1px solid transparent;
+  border-bottom-color: #9b0000;
+}
+input:focus {
+  border: 1px solid #9b0000;
+  box-shadow: none;
+}
+.clockpicker-popover {
+}
+.ui-datepicker-header {
+  background-color: whitesmoke !important;
+  border: none !important;
+}
+.ui-datepicker-next,
+.ui-datepicker-prev {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+.ui-state-default {
+  border: 1px solid #ece4e4 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.ui-state-default:hover {
+  background-color: #9b0000 !important;
+  color: white !important;
+}
+.ui-state-highlight {
+  background-color: #cccccc !important;
+  color: #ffffff !important;
+}
+.ui-state-highlight:hover {
+  background-color: #9b0000 !important;
+  color: white !important;
+}
+.ui-state-active {
+  background-color: #9b0000 !important;
+}
+.ui-state-active:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.text-primary {
+  color: #9b0000 !important;
+}
+/* 11. ALERT PHP MESSAGE */
+#alert {
+  background-color: whitesmoke;
+  color: black;
+  border: solid rgb(240, 240, 240) 3px;
+  text-align: center;
+  padding: 10px;
+  height: auto;
+  top: 308px;
+  z-index: 100;
+}
+#alert a {
+  color: #9b0000 !important;
+}
+.btn-secondary {
+  color: rgb(104, 104, 104);
+  background-color: rgb(255, 255, 255);
+  padding: 9px;
+  border-radius: 2.5px;
+  border: 1px solid rgb(226, 226, 226);
+  font-weight: bold;
+}
+.btn-primary {
+  color: rgb(155, 0, 0);
+  padding: 9px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.582);
+  border: 1px solid rgb(226, 226, 226);
+  font-weight: bold;
+}
+/* 9.9.1 Buttons hover */
+.btn-primary:hover {
+  color: white;
+  border: 1px solid rgb(155, 0, 0);
+
+  background-color: rgb(155, 0, 0);
+}
+.btn-secondary:hover {
+  color: rgb(155, 0, 0);
+  border: 1px solid rgb(155, 0, 0);
+
+  background-color: transparent;
+}
+/* 9.9.2 Buttons focus */
+.btn-primary:focus,
+.btn-secondary:focus {
+  color: rgb(155, 0, 0);
+  border: solid rgb(155, 0, 0) 1px;
+  outline: none;
+}
